@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Colitas Felices :: Gatito Milo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/styleHistorioPerito.css">
+    <link rel="icon" href="../img/logo/Logo.png" type="image/png">
+</head>
+
+<body>
+
+    <!-- Menú de opciones -->
+    <!-- Header -->
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="../index.html">
+                    <img src="../img/logo/Logo.png" alt="Logo Colitas Felices">
+                </a>
+            </div>
+
+            <!-- Botón hamburguesa (solo visible en móvil) -->
+            <button class="menu-hamburguesa" aria-label="Menú">
+                <span class="barra-hamburguesa"></span>
+                <span class="barra-hamburguesa"></span>
+                <span class="barra-hamburguesa"></span>
+            </button>
+
+            <!-- Menú normal (visible en desktop) -->
+            <div class="menu">
+                <a href="./nosotros.html">Nosotros</a>
+                <a href="./adopta.html">Adopta</a>
+                <a href="./dudas.html">Dudas</a>
+                <a href="./dona.html">Dona</a>
+                <a href="./contacto.html">Contacto</a>
+
+                <!-- Menú de cuenta (se actualiza automáticamente) -->
+                <div class="submenu">
+                    <a href="#" class="submenu-trigger">Mi Cuenta <span class="submenu-icon">▾</span></a>
+                    <div class="submenu-opciones">
+                        <!-- Contenido dinámico (se llena con auth-state.js) -->
+                        <a href="./iniciarSesion.html">Iniciar Sesión</a>
+                        <a href="./registrate.html">Registrate</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+    <!-- Sección Historia de Luna -->
+    <main class="historia-perrito">
+        <h1>🐾 La historia de Milo</h1>
+
+        <h3>📍 ¿Dónde lo encontraron?</h3>
+        <p>Milo fue hallado cerca de un parque en la urbanización La Rinconada. Jugaba con hojas caídas, y parecía estar
+            esperando a alguien. Una familia que paseaba por la zona notó que estaba solo y lo resguardó antes de que
+            cayera la noche.</p>
+
+        <h3>💔 ¿Cómo era su vida antes?</h3>
+        <p>Probablemente vivía en casa, pero fue abandonado. Su comportamiento confiado y afectuoso muestra que estuvo
+            en contacto con humanos. Estaba flaco, pero seguía con energía y sin perder su actitud juguetona.</p>
+
+        <h3>🩺 ¿Cuál es su estado actual?</h3>
+        <p>Con <strong>1 año</strong> y <strong>3 kilos</strong>, Milo está <strong>vacunado</strong> y lleno de
+            energía. Es un gatito activo y saludable, listo para encontrar una familia que lo quiera para siempre.</p>
+
+        <h3>🎾 ¿Qué le gusta hacer?</h3>
+        <p>Milo es incansable: le encanta correr, trepar y jugar con cualquier cosa que se mueva. Disfruta de las
+            alturas y de dormir en lugares soleados. También busca compañía constantemente y disfruta de la atención.
+        </p>
+
+        <h3>👶 ¿Cómo se comporta con personas o niños?</h3>
+        <p>Es <strong>muy cariñoso</strong> y <strong>compatible con niños</strong>. También se adapta bien a otros
+            gatos y perros tranquilos. Le gusta estar rodeado de personas y recibir juegos y afecto.</p>
+
+        <h3>🏡 ¿Qué tipo de hogar sería ideal para él?</h3>
+        <p>Milo necesita un hogar donde tenga espacio para moverse, jugar y recibir cariño. Es ideal para familias
+            jóvenes, con niños o con otras mascotas. Será un gran compañero para quienes disfruten del dinamismo felino.
+        </p>
+    </main>
+
+    <!-- Botón que abre el modal -->
+    <section class="boton-adoptar-container" aria-label="Acción de adopción">
+        <button id="abrirFormulario" class="boton-adoptar" aria-haspopup="dialog" aria-controls="modalFormulario"
+            aria-expanded="false">
+            🐱 Adoptar
+        </button>
+    </section>
+
+    <!-- Modal -->
+    <div id="modalFormulario" class="modal" aria-hidden="true" aria-labelledby="modalTitulo" aria-modal="true"
+        role="dialog">
+        <div class="modal-contenido">
+            <button class="cerrar" aria-label="Cerrar modal">&times;</button>
+            <h2 id="modalTitulo">Formulario de Adopción</h2>
+            <form id="formularioAdopcion">
+                <div class="form-group">
+                    <label for="nombre">Nombre completo:</label>
+                    <input type="text" id="nombre" name="nombre" required aria-required="true">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Correo electrónico:</label>
+                    <input type="email" id="email" name="email" required aria-required="true">
+                </div>
+
+                <div class="form-group">
+                    <label for="telefono">Teléfono:</label>
+                    <input type="number" id="telefono" name="telefono" inputmode="numeric" pattern="9[0-9]{8}"
+                        maxlength="9" minlength="9" required aria-required="true" placeholder="9XXXXXXXX">
+                </div>
+
+
+                <div class="form-group">
+                    <label for="mensaje">¿Por qué quieres adoptar a Milo?</label>
+                    <textarea id="mensaje" name="mensaje" rows="4" required aria-required="true"
+                        aria-describedby="mensajeHelp"></textarea>
+                    <small id="mensajeHelp" class="help-text">Describe tu situación familiar y experiencia con
+                        mascotas</small>
+                </div>
+
+                <button type="submit" class="enviar-btn">
+                    Enviar solicitud
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-contenedor">
+            <div class="footer-logo">
+                <h2>Colitas<span>Felices</span></h2>
+            </div>
+            <div class="footer-links">
+                <a href="./contacto.html">Contacto</a>
+                <a href="./AvisoLegal.html">Aviso Legal</a>
+                <a href="./PoliticaPrivacidad.html">Política de Privacidad</a>
+                <a href="./PoliticaCookies.html">Política de Cookies</a>
+                <a href="./contacto.html">Canal de Denuncias</a>
+                <a href="./mapaSitioWeb.html">Mapa del Sitio Web</a>
+            </div>
+            <div class="footer-social">
+                <h3>Síguenos</h3>
+                <a href="https://www.instagram.com" target="_blank"><img
+                        src="https://cdn-icons-png.flaticon.com/128/1384/1384031.png" alt="Instagram"></a>
+                <a href="https://www.facebook.com" target="_blank"><img
+                        src="https://cdn-icons-png.flaticon.com/24/2111/2111392.png" alt="Facebook"></a>
+                <a href="https://www.youtube.com" target="_blank"><img
+                        src="https://cdn-icons-png.flaticon.com/128/1077/1077046.png" alt="YouTube"></a>
+                <a href="https://tiktok.com" target="_blank"><img
+                        src="https://cdn-icons-png.flaticon.com/128/3046/3046125.png" alt="TikTok"></a>
+            </div>
+            <div class="footer-contact">
+                <h3>Contacto</h3>
+                <p><strong>(044) 456-7890</strong></p>
+                <p>Calle Amor Animal #123, Ciudad Trujillo</p>
+                <p><a href="mailto:contacto@colitasFelices.org">contacto@colitasFelices.org</a></p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>Web creada por <strong>Ariana Fernandez, David García, Diego Cabanillas y Paula Rodríguez</strong></p>
+        </div>
+    </footer>
+
+
+    <script src="../main.js"></script>
+    <script src="../js/adopcionModal.js"></script>
+    <script src="../js/auth-state.js"></script>
+</body>
+
+</html>

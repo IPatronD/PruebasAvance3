@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Colitas Felices :: Perrito Roy</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/styleHistorioPerito.css">
+    <link rel="icon" href="../img/logo/Logo.png" type="image/png">
+</head>
+
+<body>
+
+    <!-- Menú de opciones -->
+    <!-- Header -->
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="../index.html">
+                    <img src="../img/logo/Logo.png" alt="Logo Colitas Felices">
+                </a>
+            </div>
+
+            <!-- Botón hamburguesa (solo visible en móvil) -->
+            <button class="menu-hamburguesa" aria-label="Menú">
+                <span class="barra-hamburguesa"></span>
+                <span class="barra-hamburguesa"></span>
+                <span class="barra-hamburguesa"></span>
+            </button>
+
+            <!-- Menú normal (visible en desktop) -->
+            <div class="menu">
+                <a href="./nosotros.html">Nosotros</a>
+                <a href="./adopta.html">Adopta</a>
+                <a href="./dudas.html">Dudas</a>
+                <a href="./dona.html">Dona</a>
+                <a href="./contacto.html">Contacto</a>
+
+                <!-- Menú de cuenta (se actualiza automáticamente) -->
+                <div class="submenu">
+                    <a href="#" class="submenu-trigger">Mi Cuenta <span class="submenu-icon">▾</span></a>
+                    <div class="submenu-opciones">
+                        <!-- Contenido dinámico (se llena con auth-state.js) -->
+                        <a href="./iniciarSesion.html">Iniciar Sesión</a>
+                        <a href="./registrate.html">Registrate</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Sección Historia de Roy -->
+    <main class="historia-perrito">
+        <h1>🐾 La historia de Roy</h1>
+
+        <h3>📍 ¿Dónde lo encontraron?</h3>
+        <p>Roy fue encontrado cerca del <strong>Parque Industrial</strong> de Trujillo, merodeando entre talleres
+            mecánicos y depósitos de repuestos. A pesar del entorno hostil, su energía resaltaba entre el concreto y los
+            ruidos. Algunos trabajadores comenzaron a dejarle agua y comida, y luego nos avisaron para poder rescatarlo.
+        </p>
+
+        <h3>💔 ¿Cómo era su vida antes?</h3>
+        <p>Todo indica que Roy pasó <strong>varios años en la calle</strong>. Aunque se mantenía fuerte, tenía el pelaje
+            sucio y algunas <strong>heridas en las patas</strong> producto de caminar sobre superficies calientes y
+            peligrosas. Dormía entre cajas de cartón o en huecos entre materiales de construcción. A pesar de sus
+            condiciones, siempre movía la cola cuando alguien le mostraba atención.</p>
+
+        <h3>🩺 ¿Cuál es su estado actual?</h3>
+        <p>Roy tiene aproximadamente <strong>3 años</strong> y pesa <strong>24 kilos</strong>. Está <strong>vacunado,
+                desparasitado</strong> y con buena salud. Es un perro con <strong>mucha energía y vitalidad</strong>,
+            ideal para familias o personas activas. Se encuentra totalmente listo para empezar una nueva etapa en un
+            hogar amoroso.</p>
+
+        <h3>🎾 ¿Qué le gusta hacer?</h3>
+        <p>Roy es un verdadero torbellino de felicidad. Le encanta correr, saltar, jugar con pelotas, ramas o lo que
+            encuentre. Disfruta de los <strong>paseos largos</strong>, especialmente si hay áreas verdes donde pueda
+            explorar. Después de tanto movimiento, le encanta echarse boca arriba para recibir <strong>rascadas en la
+                barriga</strong>.</p>
+
+        <h3>👶 ¿Cómo se comporta con personas o niños?</h3>
+        <p>Es un perro <strong>muy cariñoso y sociable</strong>. Recibe con entusiasmo a quienes llegan, y le gusta
+            estar rodeado de gente. Con los niños es paciente, aunque debido a su energía, es mejor que conviva con
+            <strong>niños mayores</strong> que puedan interactuar con él de forma activa y respetuosa.
+        </p>
+
+        <h3>🏡 ¿Qué tipo de hogar sería ideal para él?</h3>
+        <p>Roy necesita un hogar <strong>activo</strong>, donde haya espacio para moverse y personas que disfruten de
+            jugar con él y sacarlo a pasear. Una casa con <strong>patio o jardín</strong> sería ideal. Es perfecto para
+            familias jóvenes, deportistas o personas que buscan un <strong>compañero leal y aventurero</strong>.</p>
+    </main>
+    <!-- Botón Adoptar -->
+    <div class="boton-adoptar-container">
+        <button id="abrirFormulario" class="boton-adoptar">🐶 Adoptar</button>
+    </div>
+
+    <!-- Modal del Formulario -->
+    <div id="modalFormulario" class="modal" aria-hidden="true" aria-labelledby="modalTitulo" aria-modal="true"
+        role="dialog">
+        <div class="modal-contenido">
+            <button class="cerrar" aria-label="Cerrar modal">&times;</button>
+            <h2 id="modalTitulo">Formulario de Adopción</h2>
+            <form id="formularioAdopcion">
+                <div class="form-group">
+                    <label for="nombre">Nombre completo:</label>
+                    <input type="text" id="nombre" name="nombre" required aria-required="true">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Correo electrónico:</label>
+                    <input type="email" id="email" name="email" required aria-required="true">
+                </div>
+
+                <div class="form-group">
+                    <label for="telefono">Teléfono:</label>
+                    <input type="number" id="telefono" name="telefono" inputmode="numeric" pattern="9[0-9]{8}"
+                        maxlength="9" minlength="9" required aria-required="true" placeholder="9XXXXXXXX">
+                </div>
+
+                <div class="form-group">
+                    <label for="mensaje">¿Por qué quieres adoptar a Roy?</label>
+                    <textarea id="mensaje" name="mensaje" rows="4" required aria-required="true"
+                        aria-describedby="mensajeHelp"></textarea>
+                    <small id="mensajeHelp" class="help-text">Describe tu situación familiar y experiencia con
+                        mascotas</small>
+                </div>
+
+                <button type="submit" class="enviar-btn">
+                    Enviar solicitud
+                </button>
+            </form>
+        </div>
+    </div>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-contenedor">
+            <div class="footer-logo">
+                <h2>Colitas<span>Felices</span></h2>
+            </div>
+            <div class="footer-links">
+                <a href="./contacto.html">Contacto</a>
+                <a href="./AvisoLegal.html">Aviso Legal</a>
+                <a href="./PoliticaPrivacidad.html">Política de Privacidad</a>
+                <a href="./PoliticaCookies.html">Política de Cookies</a>
+                <a href="./contacto.html">Canal de Denuncias</a>
+                <a href="./mapaSitioWeb.html">Mapa del Sitio Web</a>
+            </div>
+            <div class="footer-social">
+                <h3>Síguenos</h3>
+                <a href="https://www.instagram.com" target="_blank"><img
+                        src="https://cdn-icons-png.flaticon.com/128/1384/1384031.png" alt="Instagram"></a>
+                <a href="https://www.facebook.com" target="_blank"><img
+                        src="https://cdn-icons-png.flaticon.com/24/2111/2111392.png" alt="Facebook"></a>
+                <a href="https://www.youtube.com" target="_blank"><img
+                        src="https://cdn-icons-png.flaticon.com/128/1077/1077046.png" alt="YouTube"></a>
+                <a href="https://tiktok.com" target="_blank"><img
+                        src="https://cdn-icons-png.flaticon.com/128/3046/3046125.png" alt="TikTok"></a>
+            </div>
+            <div class="footer-contact">
+                <h3>Contacto</h3>
+                <p><strong>(044) 456-7890</strong></p>
+                <p>Calle Amor Animal #123, Ciudad Trujillo</p>
+                <p><a href="mailto:contacto@colitasFelices.org">contacto@colitasFelices.org</a></p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>Web creada por <strong>Ariana Fernandez, David García, Diego Cabanillas y Paula Rodríguez</strong></p>
+        </div>
+    </footer>
+
+
+    <script src="../main.js"></script>
+    <script src="../js/adopcionModal.js"></script>
+    <script src="../js/auth-state.js"></script>
+</body>
+
+</html>

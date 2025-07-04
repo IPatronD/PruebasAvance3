@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Colitas Felices :: Perrito Balloo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/styleHistorioPerito.css">
+    <link rel="icon" href="../img/logo/Logo.png" type="image/png">
+</head>
+
+<body>
+
+    <!-- Menú de opciones -->
+    <!-- Header -->
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="../index.html">
+                    <img src="../img/logo/Logo.png" alt="Logo Colitas Felices">
+                </a>
+            </div>
+
+            <!-- Botón hamburguesa (solo visible en móvil) -->
+            <button class="menu-hamburguesa" aria-label="Menú">
+                <span class="barra-hamburguesa"></span>
+                <span class="barra-hamburguesa"></span>
+                <span class="barra-hamburguesa"></span>
+            </button>
+
+            <!-- Menú normal (visible en desktop) -->
+            <div class="menu">
+                <a href="./nosotros.html">Nosotros</a>
+                <a href="./adopta.html">Adopta</a>
+                <a href="./dudas.html">Dudas</a>
+                <a href="./dona.html">Dona</a>
+                <a href="./contacto.html">Contacto</a>
+
+                <!-- Menú de cuenta (se actualiza automáticamente) -->
+                <div class="submenu">
+                    <a href="#" class="submenu-trigger">Mi Cuenta <span class="submenu-icon">▾</span></a>
+                    <div class="submenu-opciones">
+                        <!-- Contenido dinámico (se llena con auth-state.js) -->
+                        <a href="./iniciarSesion.html">Iniciar Sesión</a>
+                        <a href="./registrate.html">Registrate</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+    <!-- Sección Historia de Balloo -->
+    <main class="historia-perrito">
+        <h1>🐾 La historia de Balloo</h1>
+
+        <h3>📍 ¿Dónde lo encontraron?</h3>
+        <p>Balloo fue rescatado en el distrito de <strong>Florencia de Mora</strong>, en Trujillo. Lo encontraron
+            escondido bajo un mototaxi abandonado cerca de un mercado local. Estaba solo desde hacía varios días,
+            buscando comida entre cajas y restos de frutas, siempre esquivando a los transeúntes y al bullicio del
+            lugar.</p>
+
+        <h3>💔 ¿Cómo era su vida antes?</h3>
+        <p>Antes de su rescate, Balloo vivía en la calle, durmiendo entre cartones y pasando frío por las noches. Aunque
+            solo tiene <strong>1 año</strong>, ya conocía el abandono. A pesar de su tamaño pequeño, se las arreglaba
+            para mantenerse a salvo, escondiéndose de autos y de perros más grandes. Su pelaje estaba sucio y
+            enmarañado, pero nunca perdió la chispa en sus ojitos brillantes.</p>
+
+        <h3>🩺 ¿Cuál es su estado actual?</h3>
+        <p>Balloo pesa <strong>7 kilos</strong> y se encuentra <strong>vacunado</strong>, <strong>desparasitado</strong>
+            y con <strong>buena salud</strong>. Su tamaño lo hace ideal para espacios pequeños, y su energía joven lo
+            convierte en un compañero activo, curioso y lleno de vida.</p>
+
+        <h3>🎾 ¿Qué le gusta hacer?</h3>
+        <p>Balloo adora explorar. Cuando sale a pasear, no deja de olfatear todo a su alrededor. Le encanta corretear
+            mariposas, jugar con peluches y acurrucarse en mantitas suaves. Es juguetón y tiene una personalidad
+            chispeante, siempre dispuesto a compartir momentos alegres con su familia.</p>
+
+        <h3>👶 ¿Cómo se comporta con personas o niños?</h3>
+        <p>Es muy <strong>amistoso y cariñoso</strong>. Se lleva excelente con <strong>niños</strong>, adultos y también
+            con otros perritos. Siempre está moviendo la colita, y le encanta recibir mimos o algún premio. Es ideal
+            para hogares donde se valore el juego, el cariño y la compañía constante.</p>
+
+        <h3>🏡 ¿Qué tipo de hogar sería ideal para él?</h3>
+        <p>Balloo se adapta muy bien a <strong>departamentos o casas pequeñas</strong>. Es perfecto para
+            <strong>familias con niños</strong>, <strong>personas solteras</strong> o <strong>adultos mayores</strong>.
+            Lo único que necesita es amor, tiempo para jugar y salidas diarias para que explore el mundo a su ritmo.
+        </p>
+    </main>
+
+    <!-- Botón Adoptar -->
+    <div class="boton-adoptar-container">
+        <button id="abrirFormulario" class="boton-adoptar" aria-haspopup="dialog" aria-controls="modalFormulario"
+            aria-expanded="false">
+            🐶 Adoptar
+        </button>
+    </div>
+
+    <!-- Modal del Formulario -->
+    <div id="modalFormulario" class="modal" aria-hidden="true" aria-modal="true" role="dialog">
+        <div class="modal-contenido">
+            <button class="cerrar" aria-label="Cerrar modal">&times;</button>
+            <h2 id="modalTitulo">Formulario de Adopción</h2>
+            <form id="formularioAdopcion">
+                <div class="campo-formulario">
+                    <label for="nombre">Nombre completo:</label>
+                    <input type="text" id="nombre" name="nombre" required aria-required="true">
+                </div>
+
+                <div class="campo-formulario">
+                    <label for="email">Correo electrónico:</label>
+                    <input type="email" id="email" name="email" required aria-required="true">
+                </div>
+
+                <div class="form-group">
+                    <label for="telefono">Teléfono:</label>
+                    <input type="number" id="telefono" name="telefono" inputmode="numeric" pattern="9[0-9]{8}"
+                        maxlength="9" minlength="9" required aria-required="true" placeholder="9XXXXXXXX">
+                </div>
+
+                <div class="form-group">
+                    <label for="mensaje">¿Por qué quieres adoptar a Balloo?</label>
+                    <textarea id="mensaje" name="mensaje" rows="4" required aria-required="true"
+                        aria-describedby="mensajeHelp"></textarea>
+                    <small id="mensajeHelp" class="help-text">Describe tu situación familiar y experiencia con
+                        mascotas</small>
+                </div>
+
+                <button type="submit" class="enviar-btn">
+                    Enviar solicitud
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-contenedor">
+            <div class="footer-logo">
+                <h2>Colitas<span>Felices</span></h2>
+            </div>
+            <div class="footer-links">
+                <a href="./contacto.html">Contacto</a>
+                <a href="./AvisoLegal.html">Aviso Legal</a>
+                <a href="./PoliticaPrivacidad.html">Política de Privacidad</a>
+                <a href="./PoliticaCookies.html">Política de Cookies</a>
+                <a href="./contacto.html">Canal de Denuncias</a>
+                <a href="./mapaSitioWeb.html">Mapa del Sitio Web</a>
+            </div>
+            <div class="footer-social">
+                <h3>Síguenos</h3>
+                <a href="https://www.instagram.com" target="_blank"><img
+                        src="https://cdn-icons-png.flaticon.com/128/1384/1384031.png" alt="Instagram"></a>
+                <a href="https://www.facebook.com" target="_blank"><img
+                        src="https://cdn-icons-png.flaticon.com/24/2111/2111392.png" alt="Facebook"></a>
+                <a href="https://www.youtube.com" target="_blank"><img
+                        src="https://cdn-icons-png.flaticon.com/128/1077/1077046.png" alt="YouTube"></a>
+                <a href="https://tiktok.com" target="_blank"><img
+                        src="https://cdn-icons-png.flaticon.com/128/3046/3046125.png" alt="TikTok"></a>
+            </div>
+            <div class="footer-contact">
+                <h3>Contacto</h3>
+                <p><strong>(044) 456-7890</strong></p>
+                <p>Calle Amor Animal #123, Ciudad Trujillo</p>
+                <p><a href="mailto:contacto@colitasFelices.org">contacto@colitasFelices.org</a></p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>Web creada por <strong>Ariana Fernandez, David García, Diego Cabanillas y Paula Rodríguez</strong></p>
+        </div>
+    </footer>
+
+
+    <script src="../main.js"></script>
+    <script src="../js/adopcionModal.js"></script>
+    <script src="../js/auth-state.js"></script>
+</body>
+
+</html>

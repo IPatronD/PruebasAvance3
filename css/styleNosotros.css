@@ -1,0 +1,331 @@
+/* -------------------- nosotros.html -------------------- */
+/* Estilos generales para todas las secciones */
+.nosotros,
+.mision,
+.vision,
+.metas {
+    background-color: #FCE9E1;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    max-width: 900px;
+    margin: 0 auto 3rem auto;
+}
+
+.nosotros {
+    margin-top: 3rem;
+}
+
+.nosotros h1,
+.mision h2,
+.vision h2,
+.metas h2 {
+    font-size: 2rem;
+    color: #5C4033;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.nosotros p,
+.mision p,
+.vision p,
+.metas ul {
+    font-size: 1rem;
+    color: #5C4033;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: justify;
+}
+
+.metas ul {
+    list-style: none;
+    padding: 0;
+}
+
+.metas ul li {
+    background-color: #F8E1D4;
+    color: #5C4033;
+    padding: 0.8rem;
+    margin: 0.5rem 0;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: justify;
+}
+
+/* ============ ESTILOS PARA UBICACIÓN ============ */
+.ubicacion {
+    background-color: #FCE9E1;
+    padding: 3rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 1000px;
+    margin: 0 auto 3rem auto;
+}
+
+.mapa-contenedor {
+    width: 100%;
+    height: 400px;
+    margin: 1.5rem 0;
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.mapa-interactivo {
+    width: 100%;
+    height: 100%;
+    border: none;
+    display: block;
+}
+
+.mapa-contenedor iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.mapa-fallback {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.mapa-fallback img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.no-internet .mapa-fallback {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.info-ubicacion {
+    max-width: 350px;
+    margin: 0 auto;
+}
+
+.horario {
+    background-color: #FFE4D0;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    margin: 1.5rem 0;
+    text-align: justify;
+
+}
+
+.horario h3 {
+    text-align: center;
+}
+
+.horario ul,
+li {
+    text-align: justify;
+
+}
+
+.horario h3 {
+    color: #5C4033;
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+.horario ul {
+    list-style: none;
+    padding: 0;
+}
+
+.horario li {
+    margin: 0.8rem 0;
+    color: #5C4033;
+}
+
+.direccion {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #5C4033;
+    margin: 1.5rem 0;
+}
+
+.botones-ubicacion {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.boton-mapa {
+    padding: 0.8rem 1.5rem;
+    border-radius: 0.5rem;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.boton-mapa {
+    background-color: #F4B6A9;
+    color: #5C4033;
+}
+
+
+/* Efectos hover */
+.boton-mapa:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+/* ========================== */
+/* RESPONSIVE - TABLET/MÓVIL */
+/* ========================== */
+@media (max-width: 768px) {
+
+    /* Secciones principales */
+    .nosotros,
+    .mision,
+    .vision,
+    .metas,
+    .ubicacion {
+        max-width: 95%;
+        padding: 1.5rem;
+        margin: 0 auto 2rem auto;
+    }
+
+    .nosotros {
+        margin-top: 2rem;
+    }
+
+    .nosotros h1,
+    .mision h2,
+    .vision h2,
+    .metas h2 {
+        font-size: 1.5rem;
+    }
+
+    .nosotros p,
+    .mision p,
+    .vision p,
+    .metas ul {
+        font-size: 0.95rem;
+    }
+
+    .metas ul li {
+        font-size: 0.9rem;
+        padding: 0.6rem;
+    }
+
+    .mapa-contenedor {
+        height: 280px;
+    }
+
+    .direccion {
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    .horario {
+        padding: 1rem;
+        font-size: 0.95rem;
+    }
+
+    .horario h3 {
+        font-size: 1.2rem;
+        text-align: center;
+    }
+
+    .horario li {
+        font-size: 0.9rem;
+        text-align: center;
+    }
+
+    .botones-ubicacion {
+        flex-direction: column;
+        gap: 0.8rem;
+        align-items: center;
+    }
+
+    .boton-mapa {
+        width: 100%;
+        text-align: center;
+        font-size: 0.95rem;
+    }
+}
+
+/* ========================== */
+/* RESPONSIVE - MÓVILES <480px */
+/* ========================== */
+@media (max-width: 480px) {
+
+    .nosotros,
+    .mision,
+    .vision,
+    .metas {
+        max-width: 90%;
+        padding: 1.2rem;
+    }
+
+    .nosotros h1,
+    .mision h2,
+    .vision h2,
+    .metas h2 {
+        font-size: 1.3rem;
+    }
+
+    .nosotros p,
+    .mision p,
+    .vision p,
+    .metas ul {
+        font-size: 0.88rem;
+    }
+
+    .metas ul li {
+        font-size: 0.85rem;
+        padding: 0.5rem;
+    }
+
+    .mapa-contenedor {
+        height: 220px;
+    }
+
+    .direccion {
+        font-size: 0.95rem;
+    }
+
+    .horario {
+        padding: 0.8rem;
+    }
+
+    .horario h3 {
+        font-size: 1.1rem;
+    }
+
+    .horario li {
+        font-size: 0.88rem;
+    }
+
+    .boton-mapa {
+        font-size: 0.9rem;
+        padding: 0.7rem 1.2rem;
+    }
+}
+
+@media (max-width: 1280px) {
+
+    .nosotros,
+    .mision,
+    .vision,
+    .metas {
+        max-width: 90%;
+        padding: 2rem;
+    }
+}

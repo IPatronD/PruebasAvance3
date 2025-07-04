@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Colitas Felices :: Perrito Alfa</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/styleHistorioPerito.css">
+    <link rel="icon" href="../img/logo/Logo.png" type="image/png">
+</head>
+
+<body>
+
+    <!-- Menú de opciones -->
+    <!-- Header -->
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="../index.html">
+                    <img src="../img/logo/Logo.png" alt="Logo Colitas Felices">
+                </a>
+            </div>
+
+            <!-- Botón hamburguesa (solo visible en móvil) -->
+            <button class="menu-hamburguesa" aria-label="Menú">
+                <span class="barra-hamburguesa"></span>
+                <span class="barra-hamburguesa"></span>
+                <span class="barra-hamburguesa"></span>
+            </button>
+
+            <!-- Menú normal (visible en desktop) -->
+            <div class="menu">
+                <a href="./nosotros.html">Nosotros</a>
+                <a href="./adopta.html">Adopta</a>
+                <a href="./dudas.html">Dudas</a>
+                <a href="./dona.html">Dona</a>
+                <a href="./contacto.html">Contacto</a>
+
+                <!-- Menú de cuenta (se actualiza automáticamente) -->
+                <div class="submenu">
+                    <a href="#" class="submenu-trigger">Mi Cuenta <span class="submenu-icon">▾</span></a>
+                    <div class="submenu-opciones">
+                        <!-- Contenido dinámico (se llena con auth-state.js) -->
+                        <a href="./iniciarSesion.html">Iniciar Sesión</a>
+                        <a href="./registrate.html">Registrate</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Sección Historia de Alfa -->
+    <main class="historia-perrito">
+        <h1>🐾 La historia de Alfa</h1>
+
+        <h3>📍 ¿Dónde la encontraron?</h3>
+        <p>Alfa fue encontrada en una zona rural del distrito de <strong>Poroto</strong>, a unos 40 minutos de Trujillo.
+            Estaba deambulando por los alrededores de una chacra, desorientada y con evidentes signos de desnutrición.
+            Buscaba restos de comida entre las plantas de maíz y se refugiaba bajo los arbustos cuando hacía calor.</p>
+
+        <h3>💔 ¿Cómo era su vida antes?</h3>
+        <p>Vecinos del lugar mencionaron que Alfa vivía con una familia que se mudó y la dejó atrás. Desde entonces,
+            vivía
+            expuesta al clima y al peligro de otros animales. A pesar de que algunos lugareños intentaban alimentarla
+            con
+            sobras, Alfa no tenía atención médica ni protección. Dormía al aire libre, y tenía la piel irritada por
+            insectos.</p>
+
+        <h3>🩺 ¿Cómo llegó al albergue?</h3>
+        <p>Fue rescatada por una voluntaria que visitaba la zona. Al notar su estado, decidió llevarla al albergue. Allí
+            recibió atención veterinaria, vacunas, fue desparasitada y esterilizada. Con el tiempo, recuperó peso y su
+            energía volvió.</p>
+
+        <h3>🎾 ¿Qué le gusta hacer?</h3>
+        <p>Alfa es extremadamente juguetona. Le encanta correr detrás de pelotas, explorar jardines, jugar con palos y
+            perseguir mariposas. Tiene especial cariño por el <strong>campo abierto</strong>, donde puede correr
+            libremente
+            y cavar hoyitos. También disfruta de chapotear en charcos pequeños después de la lluvia.</p>
+
+        <h3>👶 ¿Cómo se comporta con personas o niños?</h3>
+        <p>Es una perrita cariñosa, obediente y muy sociable. Se emociona mucho cuando ve personas nuevas y busca
+            siempre
+            el contacto humano. Es perfecta para hogares con niños, ya que tiene paciencia y le encanta jugar. Además,
+            convive muy bien con otros perritos y hasta con gatos tranquilos.</p>
+
+        <h3>🏡 ¿Qué tipo de hogar sería ideal para ella?</h3>
+        <p>Alfa necesita un hogar con espacio donde pueda moverse libremente, como un patio grande o jardín. Es ideal
+            para
+            personas activas que disfruten de caminatas, paseos en bicicleta o actividades al aire libre. Se adapta bien
+            dentro de casa, siempre y cuando tenga rutinas de ejercicio y cariño constante.</p>
+    </main>
+
+    <!-- Botón que abre el modal -->
+    <section class="boton-adoptar-container" aria-label="Acción de adopción">
+        <button id="abrirFormulario" class="boton-adoptar" aria-haspopup="dialog" aria-controls="modalFormulario"
+            aria-expanded="false">
+            🐶 Adoptar
+        </button>
+    </section>
+
+    <!-- Modal -->
+    <div id="modalFormulario" class="modal" aria-hidden="true" aria-labelledby="modalTitulo" aria-modal="true"
+        role="dialog">
+        <div class="modal-contenido">
+            <button class="cerrar" aria-label="Cerrar modal">&times;</button>
+            <h2 id="modalTitulo">Formulario de Adopción</h2>
+            <form id="formularioAdopcion">
+                <div class="form-group">
+                    <label for="nombre">Nombre completo:</label>
+                    <input type="text" id="nombre" name="nombre" required aria-required="true">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Correo electrónico:</label>
+                    <input type="email" id="email" name="email" required aria-required="true">
+                </div>
+
+                <div class="form-group">
+                    <label for="telefono">Teléfono:</label>
+                    <input type="number" id="telefono" name="telefono" inputmode="numeric" pattern="9[0-9]{8}"
+                        maxlength="9" minlength="9" required aria-required="true" placeholder="9XXXXXXXX">
+                </div>
+
+                <div class="form-group">
+                    <label for="mensaje">¿Por qué quieres adoptar a Alfa?</label>
+                    <textarea id="mensaje" name="mensaje" rows="4" required aria-required="true"
+                        aria-describedby="mensajeHelp"></textarea>
+                    <small id="mensajeHelp" class="help-text">Describe tu situación familiar y experiencia con
+                        mascotas</small>
+                </div>
+
+                <button type="submit" class="enviar-btn">
+                    Enviar solicitud
+                </button>
+            </form>
+        </div>
+    </div>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-contenedor">
+            <div class="footer-logo">
+                <h2>Colitas<span>Felices</span></h2>
+            </div>
+            <div class="footer-links">
+                <a href="./contacto.html">Contacto</a>
+                <a href="./AvisoLegal.html">Aviso Legal</a>
+                <a href="./PoliticaPrivacidad.html">Política de Privacidad</a>
+                <a href="./PoliticaCookies.html">Política de Cookies</a>
+                <a href="./contacto.html">Canal de Denuncias</a>
+                <a href="./mapaSitioWeb.html">Mapa del Sitio Web</a>
+            </div>
+            <div class="footer-social">
+                <h3>Síguenos</h3>
+                <a href="https://www.instagram.com" target="_blank"><img
+                        src="https://cdn-icons-png.flaticon.com/128/1384/1384031.png" alt="Instagram"></a>
+                <a href="https://www.facebook.com" target="_blank"><img
+                        src="https://cdn-icons-png.flaticon.com/24/2111/2111392.png" alt="Facebook"></a>
+                <a href="https://www.youtube.com" target="_blank"><img
+                        src="https://cdn-icons-png.flaticon.com/128/1077/1077046.png" alt="YouTube"></a>
+                <a href="https://tiktok.com" target="_blank"><img
+                        src="https://cdn-icons-png.flaticon.com/128/3046/3046125.png" alt="TikTok"></a>
+            </div>
+            <div class="footer-contact">
+                <h3>Contacto</h3>
+                <p><strong>(044) 456-7890</strong></p>
+                <p>Calle Amor Animal #123, Ciudad Trujillo</p>
+                <p><a href="mailto:contacto@colitasFelices.org">contacto@colitasFelices.org</a></p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>Web creada por <strong>Ariana Fernandez, David García, Diego Cabanillas y Paula Rodríguez</strong></p>
+        </div>
+    </footer>
+
+
+    <script src="../main.js"></script>
+    <script src="../js/adopcionModal.js"></script>
+    <script src="../js/auth-state.js"></script>
+</body>
+
+</html>

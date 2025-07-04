@@ -1,0 +1,299 @@
+/* ==================== */
+/* VARIABLES DE COLOR */
+/* ==================== */
+:root {
+    --color-primary: #5C4033;
+    --color-secondary: #F4B6A9;
+    --color-background: #FFE4D0;
+    --color-text: #5C4033;
+    --color-accent: #E07A5F;
+    --color-light: #FFF7F5;
+    --color-border: #e0c8b8;
+}
+
+/* ==================== */
+/* ESTILOS GENERALES */
+/* ==================== */
+.welcome-container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2.5rem;
+    background-color: var(--color-background);
+    border-radius: 18px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    font-family: 'Poppins', sans-serif;
+    color: var(--color-text);
+}
+
+.welcome-title {
+    color: var(--color-primary);
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+.welcome-title::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: var(--color-secondary);
+    margin: 0.8rem auto 0;
+    border-radius: 3px;
+}
+
+.paw-icon {
+    font-size: 1.5em;
+    vertical-align: middle;
+}
+
+.welcome-message {
+    text-align: center;
+    font-size: 1.2rem;
+    margin-bottom: 2.5rem;
+    color: var(--color-text);
+}
+
+.user-name {
+    color: var(--color-primary);
+    font-weight: 600;
+}
+
+/* ==================== */
+/* TARJETAS DE INFORMACIÓN */
+/* ==================== */
+.dashboard {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+
+.dashboard-card {
+    background-color: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    border: 1px solid var(--color-border);
+    transition: transform 0.3s ease;
+}
+
+.dashboard-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+.card-header {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    margin-bottom: 1.2rem;
+    border-bottom: 2px solid var(--color-secondary);
+    padding-bottom: 0.8rem;
+}
+
+.card-icon {
+    font-size: 1.5rem;
+}
+
+.card-header h3 {
+    color: var(--color-primary);
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+.highlight {
+    color: var(--color-accent);
+}
+
+.card-list {
+    list-style: none;
+    padding-left: 0;
+    margin: 1rem 0;
+}
+
+.card-item {
+    padding: 0.5rem 0;
+    padding-left: 2rem;
+    position: relative;
+    line-height: 1.6;
+}
+
+.card-item::before {
+    content: '•';
+    position: absolute;
+    left: 1rem;
+    color: var(--color-secondary);
+    font-size: 1.5rem;
+    line-height: 1;
+}
+
+/* ==================== */
+/* BOTONES - MODIFICACIONES */
+/* ==================== */
+.button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin: 2rem 0;
+}
+
+.action-button {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    background-color: var(--color-secondary);
+    color: var(--color-text);
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    width: 220px;
+    /* Ancho fijo para uniformidad */
+    margin: 0.5rem 0;
+    /* Margen uniforme */
+}
+
+.action-button:hover {
+    background-color: var(--color-accent);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* ==================== */
+/* PIE DE BIENVENIDA */
+/* ==================== */
+.welcome-footer {
+    text-align: center;
+    padding: 1.5rem;
+    background-color: rgba(244, 182, 169, 0.15);
+    border-radius: 12px;
+    margin-top: 2rem;
+    border: 1px solid rgba(244, 182, 169, 0.3);
+}
+
+.welcome-footer p {
+    margin: 0;
+    font-size: 1.1rem;
+    display: inline;
+}
+
+.welcome-footer strong {
+    color: var(--color-primary);
+}
+
+.dog-icon {
+    font-size: 1.2rem;
+    margin-right: 0.5rem;
+    vertical-align: middle;
+}
+
+.heart-icon {
+    color: var(--color-accent);
+}
+
+/* ==================== */
+/* DISEÑO RESPONSIVO */
+/* ==================== */
+/* ==================== RESPONSIVE 768px ==================== */
+@media (max-width: 768px) {
+    .welcome-container {
+        padding: 1.5rem;
+        margin: 1rem;
+    }
+
+    .welcome-title {
+        font-size: 1.75rem;
+        padding-bottom: 0.8rem;
+    }
+
+    .welcome-message {
+        font-size: 1.1rem;
+        margin-bottom: 2rem;
+    }
+
+    .dashboard {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .dashboard-card {
+        padding: 1.2rem;
+    }
+
+    .card-header h3 {
+        font-size: 1.1rem;
+    }
+
+    .card-item {
+        font-size: 0.95rem;
+        padding-left: 1.5rem;
+    }
+
+    .action-button {
+        width: 100%;
+        max-width: 240px;
+        padding: 0.75rem 1.2rem;
+        font-size: 1rem;
+    }
+
+    .welcome-footer {
+        font-size: 1rem;
+        padding: 1.2rem;
+    }
+
+    .dog-icon {
+        font-size: 1rem;
+    }
+}
+
+/* ==================== RESPONSIVE 480px ==================== */
+@media (max-width: 480px) {
+    .welcome-title {
+        font-size: 1.5rem;
+    }
+
+    .welcome-message {
+        font-size: 1rem;
+    }
+
+    .card-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .card-icon {
+        font-size: 1.3rem;
+    }
+
+    .card-header h3 {
+        font-size: 1rem;
+    }
+
+    .card-item {
+        font-size: 0.9rem;
+        padding-left: 1.2rem;
+    }
+
+    .action-button {
+        font-size: 0.95rem;
+        padding: 0.7rem 1rem;
+    }
+
+    .welcome-footer {
+        font-size: 0.95rem;
+        padding: 1rem;
+    }
+
+    .heart-icon,
+    .dog-icon {
+        font-size: 1rem;
+    }
+}

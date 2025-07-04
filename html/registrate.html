@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Colitas Felices :: Registrate</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/styleAuth.css">
+    <link rel="icon" href="../img/logo/Logo.png" type="image/png">
+</head>
+
+<body>
+
+    <!-- Menú de opciones -->
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="../index.html">
+                    <img src="../img/logo/Logo.png" alt="Logo Colitas Felices">
+                </a>
+            </div>
+
+            <!-- Botón hamburguesa (solo visible en móvil) -->
+            <button class="menu-hamburguesa" aria-label="Menú">
+                <span class="barra-hamburguesa"></span>
+                <span class="barra-hamburguesa"></span>
+                <span class="barra-hamburguesa"></span>
+            </button>
+
+            <!-- Menú normal (visible en desktop) -->
+            <div class="menu">
+                <a href="./nosotros.html">Nosotros</a>
+                <a href="./adopta.html">Adopta</a>
+                <a href="./dudas.html">Dudas</a>
+                <a href="./dona.html">Dona</a>
+                <a href="./contacto.html">Contacto</a>
+
+                <!-- Menú de cuenta (se actualiza automáticamente) -->
+                <div class="submenu">
+                    <a href="#" class="submenu-trigger">Mi Cuenta <span class="submenu-icon">▾</span></a>
+                    <div class="submenu-opciones">
+                        <!-- Contenido dinámico (se llena con auth-state.js) -->
+                        <a href="./iniciarSesion.html">Iniciar Sesión</a>
+                        <a href="./registrate.html">Registrate</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="auth-container">
+        <h2>Regístrate</h2>
+        <form id="registroForm">
+            <input type="text" id="nombre" name="nombre" placeholder="Nombre completo" required>
+            <input type="tel" id="telefono" name="telefono" placeholder="Teléfono" pattern="[0-9]{9}" required>
+            <input type="email" id="correo" name="correo" placeholder="Correo electrónico" required>
+            <div class="password-container">
+                <input type="password" id="contrasena" name="password" placeholder="Contraseña" minlength="6" required>
+                <button type="button" class="toggle-password" data-target="contrasena" aria-label="Mostrar contraseña">
+                    <svg class="icon-visible" viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17a5 5 0 1 1 0-10 5 5 0 0 1 0 10z" />
+                        <path d="M12 9a3 3 0 1 0 0 6 3 3 0 0 0 0-6z" />
+                    </svg>
+                    <svg class="icon-hidden" viewBox="0 0 24 24" fill="currentColor" style="display: none;">
+                        <path
+                            d="M2 4.27L3.28 3 21 20.73 19.73 22l-3.06-3.06C15.25 19.3 13.67 19.5 12 19.5 7 19.5 2.73 16.39 1 12c.71-1.79 1.84-3.38 3.24-4.64L2 4.27zM12 7c.62 0 1.2.12 1.75.32l-1.57 1.57a3 3 0 0 0-3.44 3.44l-2.3 2.3C6.04 13.52 6 13.26 6 13a6 6 0 0 1 6-6zM12 17c-.26 0-.52-.02-.77-.06l-1.69-1.69A3 3 0 0 0 12 15a3 3 0 0 0 3-3c0-.37-.07-.73-.19-1.06l2.15-2.15C18.22 9.73 19.37 10.8 20.28 12c-1.73 4.39-6 7.5-11 7.5z" />
+                    </svg>
+                </button>
+            </div>
+
+            <div class="password-container">
+                <input type="password" id="repetirContrasena" name="repassword" placeholder="Repetir contraseña"
+                    minlength="6" required>
+                <button type="button" class="toggle-password" data-target="repetirContrasena"
+                    aria-label="Mostrar contraseña">
+                    <svg class="icon-visible" viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17a5 5 0 1 1 0-10 5 5 0 0 1 0 10z" />
+                        <path d="M12 9a3 3 0 1 0 0 6 3 3 0 0 0 0-6z" />
+                    </svg>
+                    <svg class="icon-hidden" viewBox="0 0 24 24" fill="currentColor" style="display: none;">
+                        <path
+                            d="M2 4.27L3.28 3 21 20.73 19.73 22l-3.06-3.06C15.25 19.3 13.67 19.5 12 19.5 7 19.5 2.73 16.39 1 12c.71-1.79 1.84-3.38 3.24-4.64L2 4.27zM12 7c.62 0 1.2.12 1.75.32l-1.57 1.57a3 3 0 0 0-3.44 3.44l-2.3 2.3C6.04 13.52 6 13.26 6 13a6 6 0 0 1 6-6zM12 17c-.26 0-.52-.02-.77-.06l-1.69-1.69A3 3 0 0 0 12 15a3 3 0 0 0 3-3c0-.37-.07-.73-.19-1.06l2.15-2.15C18.22 9.73 19.37 10.8 20.28 12c-1.73 4.39-6 7.5-11 7.5z" />
+                    </svg>
+                </button>
+            </div>
+            <button type="submit">Registrarse</button>
+            <p id="registro-error" class="error"></p>
+        </form>
+        <p class="auth-link">¿Ya tienes cuenta? <a href="./iniciarSesion.html">Inicia sesión aquí</a></p>
+    </div>
+
+    <script>
+        document.querySelectorAll('.toggle-password').forEach(button => {
+            button.addEventListener('click', function () {
+                const targetId = this.getAttribute('data-target');
+                const input = document.getElementById(targetId);
+                const isHidden = input.getAttribute('type') === 'password';
+                input.setAttribute('type', isHidden ? 'text' : 'password');
+
+                this.querySelector('.icon-visible').style.display = isHidden ? 'none' : 'inline';
+                this.querySelector('.icon-hidden').style.display = isHidden ? 'inline' : 'none';
+            });
+        });
+    </script>
+
+    <footer class="footer">
+        <div class="footer-contenedor">
+            <div class="footer-logo">
+                <h2>Colitas<span>Felices</span></h2>
+            </div>
+            <div class="footer-links">
+                <a href="./contacto.html">Contacto</a>
+                <a href="./AvisoLegal.html">Aviso Legal</a>
+                <a href="./PoliticaPrivacidad.html">Política de Privacidad</a>
+                <a href="./PoliticaCookies.html">Política de Cookies</a>
+                <a href="./contacto.html">Canal de Denuncias</a>
+                <a href="./mapaSitioWeb.html">Mapa del Sitio Web</a>
+            </div>
+            <div class="footer-social">
+                <h3>Síguenos</h3>
+                <a href="https://www.instagram.com" target="_blank"><img
+                        src="https://cdn-icons-png.flaticon.com/128/1384/1384031.png" alt="Instagram"></a>
+                <a href="https://www.facebook.com" target="_blank"><img
+                        src="https://cdn-icons-png.flaticon.com/24/2111/2111392.png" alt="Facebook"></a>
+                <a href="https://www.youtube.com" target="_blank"><img
+                        src="https://cdn-icons-png.flaticon.com/128/1077/1077046.png" alt="YouTube"></a>
+                <a href="https://tiktok.com" target="_blank"><img
+                        src="https://cdn-icons-png.flaticon.com/128/3046/3046125.png" alt="TikTok"></a>
+            </div>
+            <div class="footer-contact">
+                <h3>Contacto</h3>
+                <p><strong>(044) 456-7890</strong></p>
+                <p>Calle Amor Animal #123, Ciudad Trujillo</p>
+                <p><a href="mailto:contacto@colitasFelices.org">contacto@colitasFelices.org</a></p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>Web creada por <strong>Ariana Fernandez, David García, Diego Cabanillas y Paula Rodríguez</strong></p>
+        </div>
+    </footer>
+
+    <!-- 1. SDKs de Firebase (versión 8.10.0) -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+
+    <!-- 2. Configuración y funciones personalizadas -->
+    <script src="../js/firebase-config.js"></script>
+    <script src="../js/auth-system.js"></script>
+
+    <!-- 3. Script de registro mejorado -->
+    <script>
+        document.addEventListener('DOMContentLoaded', async function () {
+            const registroForm = document.getElementById('registroForm');
+            const errorElement = document.getElementById('registro-error');
+            const submitBtn = registroForm.querySelector('button[type="submit"]');
+
+            function mostrarError(mensaje) {
+                errorElement.textContent = mensaje;
+                return false;
+            }
+
+            registroForm.addEventListener('submit', async (e) => {
+                e.preventDefault();
+
+                // Datos del formulario
+                const datos = {
+                    nombre: document.getElementById('nombre').value.trim(),
+                    telefono: document.getElementById('telefono').value.trim(),
+                    correo: document.getElementById('correo').value.trim().toLowerCase(),
+                    contrasena: document.getElementById('contrasena').value,
+                    repetirContrasena: document.getElementById('repetirContrasena').value
+                };
+
+                // Validaciones
+                if (!datos.nombre) return mostrarError("Nombre es requerido");
+                if (!/^\d{9}$/.test(datos.telefono)) return mostrarError("Teléfono debe tener 9 dígitos");
+                if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(datos.correo)) return mostrarError("Correo no válido");
+                if (datos.contrasena.length < 8) return mostrarError("Contraseña muy corta (mínimo 6 caracteres)");
+                if (!/[A-Z]/.test(datos.contrasena)) return mostrarError("La contraseña debe contener al menos una mayúscula");
+                if (datos.contrasena !== datos.repetirContrasena) return mostrarError("Las contraseñas no coinciden");
+
+                // Mostrar cargando
+                submitBtn.disabled = true;
+                errorElement.textContent = '';
+                submitBtn.innerHTML = '<span class="spinner"></span> Registrando...';
+
+                try {
+                    // 1. Registrar usuario
+                    const userCredential = await firebase.auth().createUserWithEmailAndPassword(datos.correo, datos.contrasena);
+
+                    // 2. Guardar nombre en perfil
+                    await userCredential.user.updateProfile({ displayName: datos.nombre });
+
+                    // 3. Guardar en Realtime Database
+                    await firebase.database().ref('usuarios/' + userCredential.user.uid).set({
+                        nombre: datos.nombre,
+                        telefono: datos.telefono,
+                        correo: datos.correo,
+                        fechaRegistro: firebase.database.ServerValue.TIMESTAMP,
+                        esNuevo: true
+                    });
+
+                    // 4. Guardar en localStorage
+                    localStorage.setItem('userEmail', datos.correo);
+                    localStorage.setItem('userName', datos.nombre);
+                    localStorage.setItem('esUsuarioNuevo', 'true');
+
+                    // 5. Redirigir directamente
+                    const inHtmlFolder = window.location.pathname.includes('/html/');
+                    const rutaBienvenida = inHtmlFolder ? './bienvenidosPrimer.html?registro=exitoso' : './html/bienvenidosPrimer.html?registro=exitoso';
+                    window.location.href = rutaBienvenida;
+
+                } catch (error) {
+                    console.error("Error en registro:", error);
+
+                    let errorMessage = "";
+                    switch (error.code) {
+                        case 'auth/email-already-in-use':
+                            errorMessage = "El correo ya está registrado";
+                            break;
+                        case 'auth/invalid-email':
+                            errorMessage = "Correo electrónico no válido";
+                            break;
+                        case 'auth/weak-password':
+                            errorMessage = "La contraseña es muy débil. Debe tener al menos 6 caracteres.";
+                            break;
+                        default:
+                            errorMessage = "Ocurrió un error inesperado. Intente nuevamente";
+                    }
+
+                    mostrarError(errorMessage);
+                } finally {
+                    if (!errorElement.textContent) {
+                        submitBtn.disabled = true;
+                    } else {
+                        submitBtn.disabled = false;
+                        submitBtn.textContent = 'Registrarse';
+                    }
+                }
+            });
+        });
+    </script>
+    
+    <!-- 4. Script de control de sesión -->
+    <script src="../js/auth-state.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bienvenido - Colitas Felices :: Bienvenidos</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/styleBienvenidos.css">
+    <link rel="icon" href="../img/logo/Logo.png" type="image/png">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="../index.html">
+                    <img src="../img/logo/Logo.png" alt="Logo Colitas Felices">
+                </a>
+            </div>
+
+            <!-- Botón hamburguesa (solo visible en móvil) -->
+            <button class="menu-hamburguesa" aria-label="Menú">
+                <span class="barra-hamburguesa"></span>
+                <span class="barra-hamburguesa"></span>
+                <span class="barra-hamburguesa"></span>
+            </button>
+
+            <!-- Menú normal (visible en desktop) -->
+            <div class="menu">
+                <a href="./nosotros.html">Nosotros</a>
+                <a href="./adopta.html">Adopta</a>
+                <a href="./dudas.html">Dudas</a>
+                <a href="./dona.html">Dona</a>
+                <a href="./contacto.html">Contacto</a>
+
+                <!-- Menú de cuenta (se actualiza automáticamente) -->
+                <div class="submenu">
+                    <a href="#" class="submenu-trigger">Mi Cuenta <span class="submenu-icon">▾</span></a>
+                    <div class="submenu-opciones">
+                        <!-- Contenido dinámico (se llena con auth-state.js) -->
+                        <a href="./iniciarSesion.html">Iniciar Sesión</a>
+                        <a href="./registrate.html">Registrate</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="welcome-container">
+        <h2 class="welcome-title">¡Bienvenido/a a Colitas Felices <span class="paw-icon">🐾</span>!</h2>
+        <p class="welcome-message">Gracias por registrarte, <strong id="user-name-display" class="user-name">Nuevo
+                Usuario</strong>.</p>
+
+        <div class="dashboard">
+            <div class="dashboard-card">
+                <div class="card-header">
+                    <span class="card-icon">📋</span>
+                    <h3>Adopciones activas: <span class="highlight">0</span></h3>
+                </div>
+                <ul class="card-list">
+                    <li class="card-item">Aún no has iniciado ninguna adopción. ¡Conoce a nuestros peluditos y anímate a
+                        adoptar!</li>
+                </ul>
+                <div class="button-container">
+                    <a href="./adopta.html" class="action-button">Ir a Adopciones</a>
+                </div>
+            </div>
+
+            <div class="dashboard-card">
+                <div class="card-header">
+                    <span class="card-icon">📅</span>
+                    <h3>Citas pendientes</h3>
+                </div>
+                <ul class="card-list">
+                    <li class="card-item">No tienes citas programadas por el momento.</li>
+                    <br>
+                </ul>
+                <div class="button-container">
+                    <a href="./contacto.html" class="action-button">Agendar una cita</a>
+                </div>
+            </div>
+
+            <div class="dashboard-card">
+                <div class="card-header">
+                    <span class="card-icon">💌</span>
+                    <h3>Mensajes importantes</h3>
+                </div>
+                <ul class="card-list">
+                    <li class="card-item">Recuerda mantener tus datos actualizados para recibir notificaciones.</li>
+                    <li class="card-item">Consulta nuestra sección de ayuda si tienes dudas sobre el proceso de
+                        adopción.</li>
+                </ul>
+            </div>
+
+            <div class="dashboard-card">
+                <div class="card-header">
+                    <span class="card-icon">💖</span>
+                    <h3>Donaciones realizadas</h3>
+                </div>
+                <ul class="card-list">
+                    <li class="card-item">No has realizado donaciones todavía.</li>
+                    <li class="card-item">¡Cualquier aporte ayuda a seguir salvando vidas! <span
+                            class="heart-icon">💕</span></li>
+                </ul>
+                <div class="button-container">
+                    <a href="./dona.html" class="action-button donation-button">Hacer una donación</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="welcome-footer">
+            <span class="dog-icon">🐶</span>
+            <p>¡Gracias por apoyar a <strong>Colitas Felices</strong> y dar amor a quienes más lo necesitan!</p>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-contenedor">
+            <div class="footer-logo">
+                <h2>Colitas<span>Felices</span></h2>
+            </div>
+            <div class="footer-links">
+                <a href="./contacto.html">Contacto</a>
+                <a href="./AvisoLegal.html">Aviso Legal</a>
+                <a href="./PoliticaPrivacidad.html">Política de Privacidad</a>
+                <a href="./PoliticaCookies.html">Política de Cookies</a>
+                <a href="./contacto.html">Canal de Denuncias</a>
+                <a href="./mapaSitioWeb.html">Mapa del Sitio Web</a>
+            </div>
+            <div class="footer-social">
+                <h3>Síguenos</h3>
+                <a href="https://www.instagram.com" target="_blank"><img
+                        src="https://cdn-icons-png.flaticon.com/128/1384/1384031.png" alt="Instagram"></a>
+                <a href="https://www.facebook.com" target="_blank"><img
+                        src="https://cdn-icons-png.flaticon.com/24/2111/2111392.png" alt="Facebook"></a>
+                <a href="https://www.youtube.com" target="_blank"><img
+                        src="https://cdn-icons-png.flaticon.com/128/1077/1077046.png" alt="YouTube"></a>
+                <a href="https://tiktok.com" target="_blank"><img
+                        src="https://cdn-icons-png.flaticon.com/128/3046/3046125.png" alt="TikTok"></a>
+            </div>
+            <div class="footer-contact">
+                <h3>Contacto</h3>
+                <p><strong>(044) 456-7890</strong></p>
+                <p>Calle Amor Animal #123, Ciudad Trujillo</p>
+                <p><a href="mailto:contacto@colitasFelices.org">contacto@colitasFelices.org</a></p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>Web creada por <strong>Ariana Fernandez, David García, Diego Cabanillas y Paula Rodríguez</strong></p>
+        </div>
+    </footer>
+
+    <!-- 1. Script principal de bienvenida -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // 1. Verificar autenticación y datos del usuario
+            const userEmail = localStorage.getItem('userEmail');
+            const userName = localStorage.getItem('userName');
+
+            // Redirigir si no está autenticado
+            if (!userEmail) {
+                // Intentar recuperar desde Firebase Auth
+                const user = firebase.auth().currentUser;
+                if (user) {
+                    localStorage.setItem('userEmail', user.email);
+                    localStorage.setItem('userName', user.displayName || '');
+                } else {
+                    // Ya estamos dentro de /html/, así que no pongas ./html/
+                    window.location.href = './registrate.html';
+                    return;
+                }
+            }
+
+            // 2. Mostrar datos del usuario
+            const nameDisplay = document.getElementById('user-name-display');
+            const emailDisplay = document.getElementById('user-email');
+
+            if (nameDisplay) {
+                nameDisplay.textContent = userName || userEmail.split('@')[0] || 'Nuevo Usuario';
+            }
+
+            if (emailDisplay) {
+                emailDisplay.textContent = userEmail;
+                emailDisplay.title = userEmail; // Tooltip con email completo
+            }
+
+            // 3. Configurar logout con confirmación
+            const logoutBtn = document.getElementById('logout-btn');
+            if (logoutBtn) {
+                logoutBtn.addEventListener('click', function (e) {
+                    e.preventDefault();
+
+                    if (confirm('¿Estás seguro que deseas cerrar sesión?')) {
+                        // Limpiar almacenamiento local
+                        localStorage.removeItem('userEmail');
+                        localStorage.removeItem('userName');
+                        localStorage.removeItem('esUsuarioNuevo');
+
+                        // Redirigir a registro (estamos dentro de /html/)
+                        window.location.href = './registrate.html?logout=success';
+                    }
+                });
+            }
+
+            // 4. Manejar feedback de registro exitoso
+            const urlParams = new URLSearchParams(window.location.search);
+            if (urlParams.get('registro') === 'exitoso') {
+                const welcomeMessage = document.querySelector('.welcome-message');
+                if (welcomeMessage) {
+                    const successMsg = document.createElement('div');
+                    successMsg.className = 'registration-success';
+                    successMsg.innerHTML = `
+                    <p style="color: var(--color-accent); margin-top: 1rem;">
+                        ✔️ ¡Registro completado con éxito!
+                    </p>
+                `;
+                    welcomeMessage.appendChild(successMsg);
+
+                    // Limpiar parámetro de la URL sin recargar
+                    history.replaceState(null, '', window.location.pathname);
+                }
+            }
+
+            // 5. Mejorar experiencia visual
+            setTimeout(() => {
+                const cards = document.querySelectorAll('.dashboard-card');
+                cards.forEach((card, index) => {
+                    setTimeout(() => {
+                        card.style.transform = 'translateY(0)';
+                        card.style.opacity = '1';
+                    }, 100 * index);
+                });
+            }, 300);
+        });
+    </script>
+
+    <!-- 4. Control de menú de sesión y logout -->
+    <script src="../js/auth-state.js"></script>
+</body>
+
+</html>

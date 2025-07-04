@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Colitas Felices :: Gatito Leo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/styleHistorioPerito.css">
+    <link rel="icon" href="../img/logo/Logo.png" type="image/png">
+</head>
+
+<body>
+
+    <!-- Menú de opciones -->
+    <!-- Header -->
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="../index.html">
+                    <img src="../img/logo/Logo.png" alt="Logo Colitas Felices">
+                </a>
+            </div>
+
+            <!-- Botón hamburguesa (solo visible en móvil) -->
+            <button class="menu-hamburguesa" aria-label="Menú">
+                <span class="barra-hamburguesa"></span>
+                <span class="barra-hamburguesa"></span>
+                <span class="barra-hamburguesa"></span>
+            </button>
+
+            <!-- Menú normal (visible en desktop) -->
+            <div class="menu">
+                <a href="./nosotros.html">Nosotros</a>
+                <a href="./adopta.html">Adopta</a>
+                <a href="./dudas.html">Dudas</a>
+                <a href="./dona.html">Dona</a>
+                <a href="./contacto.html">Contacto</a>
+
+                <!-- Menú de cuenta (se actualiza automáticamente) -->
+                <div class="submenu">
+                    <a href="#" class="submenu-trigger">Mi Cuenta <span class="submenu-icon">▾</span></a>
+                    <div class="submenu-opciones">
+                        <!-- Contenido dinámico (se llena con auth-state.js) -->
+                        <a href="./iniciarSesion.html">Iniciar Sesión</a>
+                        <a href="./registrate.html">Registrate</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+    <!-- Sección Historia de Luna -->
+    <main class="historia-perrito">
+        <h1>🐾 La historia de Leo</h1>
+
+        <h3>📍 ¿Dónde lo encontraron?</h3>
+        <p>Leo fue visto rondando por varios días en una zona residencial de Trujillo. Dormía en los techos y bajaba
+            solo para buscar comida. Se mantenía cerca de una casa vacía, donde se refugiaba por las noches.</p>
+
+        <h3>💔 ¿Cómo era su vida antes?</h3>
+        <p>Se sospecha que Leo fue dejado atrás por sus anteriores dueños. Su comportamiento protector y la forma en que
+            cuidaba la zona donde dormía mostraban un fuerte sentido territorial. Aunque era desconfiado al principio,
+            aceptó ayuda tras varios intentos.</p>
+
+        <h3>🩺 ¿Cuál es su estado actual?</h3>
+        <p>Con <strong>5 años</strong> y <strong>6 kilos</strong>, Leo está <strong>esterilizado</strong> y saludable.
+            Tiene una personalidad fuerte y leal. Es un gato imponente, con mirada atenta y andar seguro.</p>
+
+        <h3>🎾 ¿Qué le gusta hacer?</h3>
+        <p>Leo prefiere observar antes que actuar. Le gusta estar en lugares elevados y patrullar su entorno. No es
+            excesivamente juguetón, pero disfruta de caricias cuando las busca. Es un gran vigilante silencioso del
+            hogar.</p>
+
+        <h3>👶 ¿Cómo se comporta con personas o niños?</h3>
+        <p>Es leal con los adultos que conoce, pero <strong>no se lleva bien con otros animales</strong>. Se recomienda
+            en hogares donde sea el único gato. Con <strong>niños tranquilos</strong>, puede convivir sin problema si se
+            le respeta su espacio.</p>
+
+        <h3>🏡 ¿Qué tipo de hogar sería ideal para él?</h3>
+        <p>Un hogar sin otras mascotas, donde se le brinde respeto y seguridad. Ideal para personas adultas que busquen
+            un <strong>compañero leal y protector</strong>. Leo necesita un espacio que sienta suyo y humanos que lo
+            acepten tal como es.</p>
+    </main>
+
+    <!-- Botón que abre el modal -->
+    <section class="boton-adoptar-container" aria-label="Acción de adopción">
+        <button id="abrirFormulario" class="boton-adoptar" aria-haspopup="dialog" aria-controls="modalFormulario"
+            aria-expanded="false">
+            🐱 Adoptar
+        </button>
+    </section>
+
+    <!-- Modal -->
+    <div id="modalFormulario" class="modal" aria-hidden="true" aria-labelledby="modalTitulo" aria-modal="true"
+        role="dialog">
+        <div class="modal-contenido">
+            <button class="cerrar" aria-label="Cerrar modal">&times;</button>
+            <h2 id="modalTitulo">Formulario de Adopción</h2>
+            <form id="formularioAdopcion">
+                <div class="form-group">
+                    <label for="nombre">Nombre completo:</label>
+                    <input type="text" id="nombre" name="nombre" required aria-required="true">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Correo electrónico:</label>
+                    <input type="email" id="email" name="email" required aria-required="true">
+                </div>
+
+                <div class="form-group">
+                    <label for="telefono">Teléfono:</label>
+                    <input type="number" id="telefono" name="telefono" inputmode="numeric" pattern="9[0-9]{8}"
+                        maxlength="9" minlength="9" required aria-required="true" placeholder="9XXXXXXXX">
+                </div>
+
+
+                <div class="form-group">
+                    <label for="mensaje">¿Por qué quieres adoptar a Leo?</label>
+                    <textarea id="mensaje" name="mensaje" rows="4" required aria-required="true"
+                        aria-describedby="mensajeHelp"></textarea>
+                    <small id="mensajeHelp" class="help-text">Describe tu situación familiar y experiencia con
+                        mascotas</small>
+                </div>
+
+                <button type="submit" class="enviar-btn">
+                    Enviar solicitud
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-contenedor">
+            <div class="footer-logo">
+                <h2>Colitas<span>Felices</span></h2>
+            </div>
+            <div class="footer-links">
+                <a href="./contacto.html">Contacto</a>
+                <a href="./AvisoLegal.html">Aviso Legal</a>
+                <a href="./PoliticaPrivacidad.html">Política de Privacidad</a>
+                <a href="./PoliticaCookies.html">Política de Cookies</a>
+                <a href="./contacto.html">Canal de Denuncias</a>
+                <a href="./mapaSitioWeb.html">Mapa del Sitio Web</a>
+            </div>
+            <div class="footer-social">
+                <h3>Síguenos</h3>
+                <a href="https://www.instagram.com" target="_blank"><img
+                        src="https://cdn-icons-png.flaticon.com/128/1384/1384031.png" alt="Instagram"></a>
+                <a href="https://www.facebook.com" target="_blank"><img
+                        src="https://cdn-icons-png.flaticon.com/24/2111/2111392.png" alt="Facebook"></a>
+                <a href="https://www.youtube.com" target="_blank"><img
+                        src="https://cdn-icons-png.flaticon.com/128/1077/1077046.png" alt="YouTube"></a>
+                <a href="https://tiktok.com" target="_blank"><img
+                        src="https://cdn-icons-png.flaticon.com/128/3046/3046125.png" alt="TikTok"></a>
+            </div>
+            <div class="footer-contact">
+                <h3>Contacto</h3>
+                <p><strong>(044) 456-7890</strong></p>
+                <p>Calle Amor Animal #123, Ciudad Trujillo</p>
+                <p><a href="mailto:contacto@colitasFelices.org">contacto@colitasFelices.org</a></p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>Web creada por <strong>Ariana Fernandez, David García, Diego Cabanillas y Paula Rodríguez</strong></p>
+        </div>
+    </footer>
+
+
+    <script src="../main.js"></script>
+    <script src="../js/adopcionModal.js"></script>
+    <script src="../js/auth-state.js"></script>
+</body>
+
+</html>

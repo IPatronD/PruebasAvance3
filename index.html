@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Colitas Felices</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/base.css">
+  <link rel="stylesheet" href="styleIndex.css">
+  <link rel="icon" href="img/logo/Logo.png" type="image/png">
+
+</head>
+
+<body>
+  <!-- Header -->
+  <header>
+    <nav>
+      <div class="logo">
+        <a href="index.html">
+          <img src="img/logo/Logo.png" alt="Logo Colitas Felices">
+        </a>
+      </div>
+
+      <!-- Botón hamburguesa (solo visible en móvil) -->
+      <button class="menu-hamburguesa" aria-label="Menú">
+        <span class="barra-hamburguesa"></span>
+        <span class="barra-hamburguesa"></span>
+        <span class="barra-hamburguesa"></span>
+      </button>
+
+      <!-- Menú normal (visible en desktop) -->
+      <div class="menu">
+        <a href="html/nosotros.html">Nosotros</a>
+        <a href="html/adopta.html">Adopta</a>
+        <a href="html/dudas.html">Dudas</a>
+        <a href="html/dona.html">Dona</a>
+        <a href="html/contacto.html">Contacto</a>
+
+        <!-- Menú de cuenta (se actualiza automáticamente) -->
+        <div class="submenu">
+          <a href="#" class="submenu-trigger">Mi Cuenta <span class="submenu-icon">▾</span></a>
+          <div class="submenu-opciones">
+            <!-- Contenido dinámico (se llena con auth-state.js) -->
+            <a href="./html/iniciarSesion.html">Iniciar Sesión</a>
+            <a href="./html/registrate.html">Registrate</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Sección principal -->
+  <main>
+    <!-- Sección de concientización -->
+    <section class="concientizacion">
+      <div class="concientizacion-contenedor">
+        <h1>Adoptar es un acto de amor</h1>
+        <p>
+          Cada año, miles de mascotas esperan una segunda oportunidad. Adoptar
+          no solo cambia su vida, también transforma la tuya. Darle un hogar a
+          un animal rescatado es una de las decisiones más humanas y valientes
+          que puedes tomar.
+        </p>
+        <a href="./html/adopta.html" class="btn-adoptar">Conoce a los que esperan por ti</a>
+      </div>
+    </section>
+
+    <section class="galeria-collage">
+      <h1>Galería de Esperanza</h1>
+      <div class="collage">
+        <img src="img/perritos/alfa.jpeg" alt="Alfa">
+        <img src="img/perritos/balloo.jpeg" alt="Balloo">
+        <img src="img/perritos/chester.jpeg" alt="Chester">
+        <img src="img/gatitos/Gato1.png" alt="Luna">
+        <img src="img/gatitos/Gato2.png" alt="Milo">
+        <img src="img/perritos/roy.jpeg" alt="Roy">
+      </div>
+    </section>
+
+    <!-- Carrusel de imágenes -->
+    <section class="carrusel-titulo">
+      <h1>🐶 Desliza ternura, elige amor 🐱</h1>
+      <p>Conoce a algunos de nuestros adorables peluditos que esperan por un hogar lleno de cariño.</p>
+      <section class="carrusel">
+        <div class="carrusel-contenedor">
+          <div class="slide-track">
+            <!-- Perritos (9 imágenes) -->
+            <div class="slide">
+              <div class="image-container">
+                <a href="img/perritos/alfa.jpeg" class="lightbox-trigger" data-caption="Perrito Alfa">
+                  <img src="img/perritos/alfa.jpeg" alt="Perrito Alfa" loading="lazy">
+                </a>
+              </div>
+            </div>
+            <div class="slide">
+              <div class="image-container">
+                <a href="img/perritos/balloo.jpeg" class="lightbox-trigger" data-caption="Perrito Balloo">
+                  <img src="img/perritos/balloo.jpeg" alt="Perrito Balloo" loading="lazy">
+                </a>
+              </div>
+            </div>
+            <div class="slide">
+              <div class="image-container">
+                <a href="img/perritos/chester.jpeg" class="lightbox-trigger" data-caption="Perrito Chester">
+                  <img src="img/perritos/chester.jpeg" alt="Perrito Chester" loading="lazy">
+                </a>
+              </div>
+            </div>
+            <div class="slide">
+              <div class="image-container">
+                <a href="img/perritos/mullet.jpeg" class="lightbox-trigger" data-caption="Perrito Mullet">
+                  <img src="img/perritos/mullet.jpeg" alt="Perrito Mullet" loading="lazy">
+                </a>
+              </div>
+            </div>
+            <div class="slide">
+              <div class="image-container">
+                <a href="img/perritos/pedro.jpeg" class="lightbox-trigger" data-caption="Perrito Pedro">
+                  <img src="img/perritos/pedro.jpeg" alt="Perrito Pedro" loading="lazy">
+                </a>
+              </div>
+            </div>
+            <div class="slide">
+              <div class="image-container">
+                <a href="img/perritos/roy.jpeg" class="lightbox-trigger" data-caption="Perrito Roy">
+                  <img src="img/perritos/roy.jpeg" alt="Perrito Roy" loading="lazy">
+                </a>
+              </div>
+            </div>
+            <div class="slide">
+              <div class="image-container">
+                <a href="img/perritos/Simon.jpeg" class="lightbox-trigger" data-caption="Perrito Simón">
+                  <img src="img/perritos/Simon.jpeg" alt="Perrito Simón" loading="lazy">
+                </a>
+              </div>
+            </div>
+            <div class="slide">
+              <div class="image-container">
+                <a href="img/perritos/perrito8.jpg" class="lightbox-trigger" data-caption="Perrito Max">
+                  <img src="img/perritos/perrito8.jpg" alt="Perrito Max" loading="lazy">
+                </a>
+              </div>
+            </div>
+            <div class="slide">
+              <div class="image-container">
+                <a href="img/perritos/perrito9.jpg" class="lightbox-trigger" data-caption="Perrito Toby">
+                  <img src="img/perritos/perrito9.jpg" alt="Perrito Toby" loading="lazy">
+                </a>
+              </div>
+            </div>
+
+            <!-- Gatitos (9 imágenes) -->
+            <div class="slide">
+              <div class="image-container">
+                <a href="img/gatitos/Gato1.png" class="lightbox-trigger" data-caption="Gatito Luna">
+                  <img src="img/gatitos/Gato1.png" alt="Gatito Luna" loading="lazy">
+                </a>
+              </div>
+            </div>
+            <div class="slide">
+              <div class="image-container">
+                <a href="img/gatitos/Gato2.png" class="lightbox-trigger" data-caption="Gatito Milo">
+                  <img src="img/gatitos/Gato2.png" alt="Gatito Milo" loading="lazy">
+                </a>
+              </div>
+            </div>
+            <div class="slide">
+              <div class="image-container">
+                <a href="img/gatitos/Gato3.png" class="lightbox-trigger" data-caption="Gatito Oliver">
+                  <img src="img/gatitos/Gato3.png" alt="Gatito Oliver" loading="lazy">
+                </a>
+              </div>
+            </div>
+            <div class="slide">
+              <div class="image-container">
+                <a href="img/gatitos/Gato4.png" class="lightbox-trigger" data-caption="Gatito Bella">
+                  <img src="img/gatitos/Gato4.png" alt="Gatito Bella" loading="lazy">
+                </a>
+              </div>
+            </div>
+            <div class="slide">
+              <div class="image-container">
+                <a href="img/gatitos/Gato5.png" class="lightbox-trigger" data-caption="Gatito Leo">
+                  <img src="img/gatitos/Gato5.png" alt="Gatito Leo" loading="lazy">
+                </a>
+              </div>
+            </div>
+            <div class="slide">
+              <div class="image-container">
+                <a href="img/gatitos/Gato6.png" class="lightbox-trigger" data-caption="Gatito Chloe">
+                  <img src="img/gatitos/Gato6.png" alt="Gatito Chloe" loading="lazy">
+                </a>
+              </div>
+            </div>
+            <div class="slide">
+              <div class="image-container">
+                <a href="img/gatitos/Gato7.png" class="lightbox-trigger" data-caption="Gatito Charlie">
+                  <img src="img/gatitos/Gato7.png" alt="Gatito Charlie" loading="lazy">
+                </a>
+              </div>
+            </div>
+            <div class="slide">
+              <div class="image-container">
+                <a href="img/gatitos/Gato8.png" class="lightbox-trigger" data-caption="Gatito Lily">
+                  <img src="img/gatitos/Gato8.png" alt="Gatito Lily" loading="lazy">
+                </a>
+              </div>
+            </div>
+            <div class="slide">
+              <div class="image-container">
+                <a href="img/gatitos/Gato9.png" class="lightbox-trigger" data-caption="Gatito Jack">
+                  <img src="img/gatitos/Gato9.png" alt="Gatito Jack" loading="lazy">
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Lightbox Container -->
+        <div id="lightbox" class="lightbox">
+          <span class="close-btn" title="Cerrar">&times;</span>
+          <div class="lightbox-container">
+            <div class="lightbox-content-container">
+              <img class="lightbox-content" id="lightbox-img" alt="">
+            </div>
+            <div class="lightbox-caption"></div>
+          </div>
+          <div class="lightbox-nav">
+            <button class="prev-btn" title="Anterior">&#10094;</button>
+            <button class="next-btn" title="Siguiente">&#10095;</button>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <section class="testimonios">
+      <h1>Historias que Inspiran</h1>
+      <div class="testimonios-contenedor">
+        <div class="testimonio">
+          <p>"Adopté a Luna hace 3 meses. Llegó tímida y ahora es la reina de la casa. ¡Gracias Colitas Felices!"</p>
+          <span>– Camila R.</span>
+        </div>
+        <div class="testimonio">
+          <p>"Simón le ha dado alegría a nuestra familia. Adoptar fue la mejor decisión que tomamos."</p>
+          <br>
+          <span>– Jorge y Ana</span>
+        </div>
+        <div class="testimonio">
+          <p>"Pensé que estaba salvando a Toby, pero él terminó salvándome a mí."</p>
+          <br>
+          <span>– Sofía M.</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="impacto">
+      <h1>Nuestro impacto</h1>
+      <div class="impacto-datos">
+        <div><strong>10+</strong><br>Adopciones exitosas</div>
+        <div><strong>2</strong><br>Voluntarios activos</div>
+        <div><strong>18</strong><br>Mascotas en espera</div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-contenedor">
+      <div class="footer-logo">
+        <h2>Colitas<span>Felices</span></h2>
+      </div>
+      <div class="footer-links">
+        <a href="./html/contacto.html">Contacto</a>
+        <a href="./html/AvisoLegal.html">Aviso Legal</a>
+        <a href="./html/PoliticaPrivacidad.html">Política de Privacidad</a>
+        <a href="./html/PoliticaCookies.html">Política de Cookies</a>
+        <a href="./html/contacto.html">Canal de Denuncias</a>
+        <a href="./html/mapaSitioWeb.html">Mapa del Sitio Web</a>
+      </div>
+      <div class="footer-social">
+        <h3>Síguenos</h3>
+        <a href="https://www.instagram.com" target="_blank"><img
+            src="https://cdn-icons-png.flaticon.com/128/1384/1384031.png" alt="Instagram"></a>
+        <a href="https://www.facebook.com" target="_blank"><img
+            src="https://cdn-icons-png.flaticon.com/24/2111/2111392.png" alt="Facebook"></a>
+        <a href="https://www.youtube.com" target="_blank"><img
+            src="https://cdn-icons-png.flaticon.com/128/1077/1077046.png" alt="YouTube"></a>
+        <a href="https://tiktok.com" target="_blank"><img src="https://cdn-icons-png.flaticon.com/128/3046/3046125.png"
+            alt="TikTok"></a>
+      </div>
+      <div class="footer-contact">
+        <h3>Contacto</h3>
+        <p><strong>(044) 456-7890</strong></p>
+        <p>Calle Amor Animal #123, Ciudad Trujillo</p>
+        <p><a href="mailto:contacto@colitasFelices.org">contacto@colitasFelices.org</a></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>Web creada por <strong>Ariana Fernandez, David García, Diego Cabanillas y Paula Rodríguez</strong></p>
+    </div>
+  </footer>
+
+
+  <script src="main.js"></script>
+  <script src="./js/index.js"></script>
+  <script src="./js/auth-state.js"></script>
+</body>
+
+</html>

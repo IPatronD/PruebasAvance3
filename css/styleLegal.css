@@ -1,0 +1,140 @@
+.legal {
+    background-color: #fff8f4;
+    border: 3px solid #c89f9c;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(200, 159, 156, 0.2);
+    max-width: 900px;
+    margin: 3rem auto 3rem auto;
+    padding: 2rem 2.5rem;
+    font-family: 'Poppins', sans-serif;
+    color: #5C4033;
+    line-height: 1.7;
+    text-align: center;
+}
+
+.legal .container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+/* Titulares */
+.legal h1,
+.legal h2,
+.legal h3 {
+    color: #5C4033;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.legal h1 {
+    font-size: 2.5rem;
+    position: relative;
+    padding-bottom: 0.5rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.legal h1::after {
+    content: "";
+    display: block;
+    width: 70px;
+    height: 4px;
+    background-color: #a26560;
+    border-radius: 4px;
+    margin: 0.5rem auto 0;
+}
+
+.legal h2 {
+    font-size: 1.8rem;
+    margin-top: 2.5rem;
+}
+
+.legal h3 {
+    font-size: 1.3rem;
+    margin-top: 1.8rem;
+}
+
+/* Texto y listas */
+.legal p,
+.legal li {
+    font-size: 1.05rem;
+    margin-bottom: 1rem;
+    color: #4d3b36;
+}
+
+.legal ul {
+    padding-left: 1.5rem;
+    list-style-type: disc;
+    margin: 0 auto 1.5rem;
+    max-width: 600px;
+}
+
+/* Enlaces */
+.legal a {
+    color: #a26560;
+    text-decoration: underline;
+    transition: color 0.3s ease;
+}
+
+.legal a:hover,
+.legal a:focus {
+    color: #8e544f;
+    text-decoration: none;
+    outline: none;
+}
+
+/* ========================= */
+/* RESPONSIVE PARA .LEGAL */
+/* ========================= */
+
+@media (max-width: 992px) {
+    .legal {
+        margin: 2rem 1.5rem;
+        padding: 1.5rem 2rem;
+    }
+
+    .legal h1 {
+        font-size: 2rem;
+    }
+
+    .legal h2 {
+        font-size: 1.5rem;
+    }
+
+    .legal h3 {
+        font-size: 1.2rem;
+    }
+
+    .legal p,
+    .legal li {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .legal {
+        padding: 1.2rem 1.2rem;
+    }
+
+    .legal h1 {
+        font-size: 1.7rem;
+    }
+
+    .legal h2 {
+        font-size: 1.3rem;
+    }
+
+    .legal h3 {
+        font-size: 1.1rem;
+    }
+
+    .legal p,
+    .legal li {
+        font-size: 0.95rem;
+    }
+
+    .legal ul {
+        padding-left: 1rem;
+    }
+}

@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Colitas Felices :: Nosotros</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/styleNosotros.css">
+  <link rel="icon" href="../img/logo/Logo.png" type="image/png">
+</head>
+
+<body>
+
+  <!-- Menú de opciones -->
+  <!-- Header -->
+  <header>
+        <nav>
+            <div class="logo">
+                <a href="../index.html">
+                    <img src="../img/logo/Logo.png" alt="Logo Colitas Felices">
+                </a>
+            </div>
+
+            <!-- Botón hamburguesa (solo visible en móvil) -->
+            <button class="menu-hamburguesa" aria-label="Menú">
+                <span class="barra-hamburguesa"></span>
+                <span class="barra-hamburguesa"></span>
+                <span class="barra-hamburguesa"></span>
+            </button>
+
+            <!-- Menú normal (visible en desktop) -->
+            <div class="menu">
+                <a href="./nosotros.html">Nosotros</a>
+                <a href="./adopta.html">Adopta</a>
+                <a href="./dudas.html">Dudas</a>
+                <a href="./dona.html">Dona</a>
+                <a href="./contacto.html">Contacto</a>
+
+                <!-- Menú de cuenta (se actualiza automáticamente) -->
+                <div class="submenu">
+                    <a href="#" class="submenu-trigger">Mi Cuenta <span class="submenu-icon">▾</span></a>
+                    <div class="submenu-opciones">
+                        <!-- Contenido dinámico (se llena con auth-state.js) -->
+                        <a href="./iniciarSesion.html">Iniciar Sesión</a>
+                        <a href="./registrate.html">Registrate</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+  <!-- Sección Sobre Nosotros -->
+  <section class="nosotros">
+    <div class="contenedor-nosotros">
+      <h1>Sobre Nosotros</h1>
+      <p>
+        En <strong>Colitas Felices</strong>, creemos que cada mascota merece
+        un hogar lleno de amor. Nos dedicamos a conectar animales rescatados
+        con personas dispuestas a ofrecerles una nueva oportunidad.
+        Trabajamos con refugios y voluntarios para asegurar procesos
+        responsables de adopción.
+      </p>
+    </div>
+  </section>
+
+  <!-- Sección Misión -->
+  <section class="mision">
+    <div class="contenedor-mision">
+      <h2>Nuestra Misión</h2>
+      <p>
+        Estamos comenzando un camino lleno de esperanza y compromiso con el
+        bienestar animal. Nuestra misión es rescatar, proteger y brindar
+        segundas oportunidades a los peluditos en situación de abandono o
+        maltrato. Queremos ofrecerles un espacio seguro donde reciban amor,
+        cuidados y, sobre todo, la oportunidad de encontrar una familia que
+        los valore. A través de la educación y la concienciación, buscamos
+        inspirar a más personas a formar parte de este cambio, promoviendo
+        la adopción responsable y el respeto hacia todos los seres vivos.
+      </p>
+    </div>
+  </section>
+
+  <!-- Sección Visión -->
+  <section class="vision">
+    <div class="contenedor-vision">
+      <h2>Nuestra Visión</h2>
+      <p>
+        Soñamos con un futuro en el que ningún animal sufra abandono o
+        maltrato, donde el amor y la empatía hacia ellos sean valores
+        fundamentales en nuestra sociedad. Aunque estamos empezando,
+        queremos construir una comunidad solidaria que trabaje unida para
+        proteger y cuidar a los animales que más lo necesitan. Nuestro
+        objetivo es crecer, generar un impacto positivo y convertirnos en un
+        referente en el rescate, rehabilitación y adopción de animales,
+        asegurando que cada peludito tenga la oportunidad de vivir una vida
+        digna y llena de cariño.
+      </p>
+    </div>
+  </section>
+
+  <!-- Sección Metas -->
+  <section class="metas">
+    <div class="contenedor-metas">
+      <h2>Nuestras Metas</h2>
+      <ul>
+        <li>
+          Rescate y rehabilitación: Incrementar el número de animales
+          rescatados y garantizar su recuperación física y emocional.
+        </li>
+        <li>
+          Adopciones responsables: Facilitar procesos de adopción seguros,
+          asegurando que cada peludito encuentre un hogar amoroso y
+          adecuado.
+        </li>
+        <li>
+          Concienciación y educación: Impulsar campañas para promover el
+          respeto y el cuidado de los animales, sensibilizando a la
+          comunidad sobre su bienestar.
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Sección Ubicación -->
+  <section class="ubicacion">
+    <div class="contenedor-ubicacion">
+      <h2>¿Dónde estamos?</h2>
+
+      <!-- Contenedor del mapa con fallback -->
+      <div class="mapa-contenedor">
+        <iframe src="https://www.google.com/maps?q=VW6X%2BR6C%2C+Victor+Larco+Herrera+13009&output=embed"
+          class="mapa-interactivo" title="Ubicación de Colitas Felices" aria-label="Mapa interactivo">
+        </iframe>
+
+        <!-- Fallback para sin internet -->
+        <div class="mapa-fallback">
+          <img src="../img/mapa-Estatico.png" alt="Mapa estático de nuestra ubicación">
+        </div>
+      </div>
+
+      <!-- Información de contacto y horarios -->
+      <div class="info-ubicacion">
+        <div class="horario">
+          <h3>🕒 Horario de Atención</h3>
+          <ul>
+            <li>Lunes a Viernes: <strong>9:00 AM - 6:00 PM</strong></li>
+            <li>Sábado: <strong>9:00 AM - 1:00 PM</strong></li>
+            <li>Domingo: <strong>Cerrado</strong></li>
+          </ul>
+        </div>
+
+        <p class="direccion">📍 Calle Amor Animal #123, Ciudad Trujillo</p>
+
+        <div class="botones-ubicacion">
+          <a href="https://maps.google.com?q=Calle+Amor+Animal+123,Ciudad+Trujillo" target="_blank" class="boton-mapa">
+            Cómo llegar
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+        <div class="footer-contenedor">
+            <div class="footer-logo">
+                <h2>Colitas<span>Felices</span></h2>
+            </div>
+            <div class="footer-links">
+                <a href="./contacto.html">Contacto</a>
+                <a href="./AvisoLegal.html">Aviso Legal</a>
+                <a href="./PoliticaPrivacidad.html">Política de Privacidad</a>
+                <a href="./PoliticaCookies.html">Política de Cookies</a>
+                <a href="./contacto.html">Canal de Denuncias</a>
+                <a href="./mapaSitioWeb.html">Mapa del Sitio Web</a>
+            </div>
+            <div class="footer-social">
+                <h3>Síguenos</h3>
+                <a href="https://www.instagram.com" target="_blank"><img
+                        src="https://cdn-icons-png.flaticon.com/128/1384/1384031.png" alt="Instagram"></a>
+                <a href="https://www.facebook.com" target="_blank"><img
+                        src="https://cdn-icons-png.flaticon.com/24/2111/2111392.png" alt="Facebook"></a>
+                <a href="https://www.youtube.com" target="_blank"><img
+                        src="https://cdn-icons-png.flaticon.com/128/1077/1077046.png" alt="YouTube"></a>
+                <a href="https://tiktok.com" target="_blank"><img
+                        src="https://cdn-icons-png.flaticon.com/128/3046/3046125.png" alt="TikTok"></a>
+            </div>
+            <div class="footer-contact">
+                <h3>Contacto</h3>
+                <p><strong>(044) 456-7890</strong></p>
+                <p>Calle Amor Animal #123, Ciudad Trujillo</p>
+                <p><a href="mailto:contacto@colitasFelices.org">contacto@colitasFelices.org</a></p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>Web creada por <strong>Ariana Fernandez, David García, Diego Cabanillas y Paula Rodríguez</strong></p>
+        </div>
+    </footer>
+
+
+  <script src="../main.js"></script>
+  <script src="../js/auth-state.js"></script>
+</body>
+
+</html>

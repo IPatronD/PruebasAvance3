@@ -1,0 +1,108 @@
+/* -------------------- dudas.html -------------------- */
+.acordeon-preguntas {
+    width: 100%;
+    max-width: 900px;
+    padding: 2rem;
+    margin: 0.5rem auto 1rem auto;
+    font-family: sans-serif;
+    text-align: center;
+}
+
+.acordeon-preguntas h1 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: #5C4033;
+}
+
+.pregunta {
+    background-color: #fbdfd9;
+    padding: 15px;
+    margin: 5px 0;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #F4B6A9;
+    border-radius: 8px;
+    transition: background-color 0.2s;
+    color: #5C4033;
+}
+
+.pregunta:hover {
+    background-color: #FFEFEF;
+}
+
+.respuesta {
+    display: none;
+    padding: 10px 15px;
+    background-color: #FCE9E1;
+    border-left: 3px solid #F4B6A9;
+    margin-bottom: 10px;
+    animation: fadeIn 0.3s ease-in-out;
+    text-align: left;
+}
+
+.flecha {
+    transition: transform 0.3s;
+}
+
+.abierta .respuesta {
+    display: block;
+}
+
+.abierta .flecha {
+    transform: rotate(90deg);
+}
+
+/* ============ DISEÑO RESPONSIVO ============ */
+
+/* Para pantallas pequeñas (menos de 768px) */
+@media (max-width: 768px) {
+    .acordeon-preguntas {
+        padding: 1.5rem;
+    }
+
+    .acordeon-preguntas h1 {
+        font-size: 1.5rem;
+    }
+
+    .pregunta {
+        padding: 12px;
+        font-size: 1rem;
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    .flecha {
+        margin-top: 5px;
+    }
+
+    .respuesta {
+        padding: 8px 12px;
+    }
+}
+
+/* Para pantallas extra pequeñas (menos de 480px) */
+@media (max-width: 480px) {
+    .acordeon-preguntas {
+        padding: 1rem;
+    }
+
+    .acordeon-preguntas h1 {
+        font-size: 1.2rem;
+    }
+
+    .pregunta {
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+
+    .respuesta {
+        padding: 6px 10px;
+    }
+
+    .flecha {
+        font-size: 1rem;
+    }
+}

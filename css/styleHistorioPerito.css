@@ -1,0 +1,384 @@
+/* ==================== ESTILOS PRINCIPALES - PÁGINA DE HISTORIA DEL PERRITO ==================== */
+
+/**
+ * Contenedor principal de la historia del perrito
+ * Diseño: Tarjeta con sombra y efecto hover
+ */
+.historia-perrito {
+    padding: 40px;
+    max-width: 800px;
+    margin: 50px auto;
+    font-family: 'Poppins', sans-serif;
+    color: #5C4033;
+    /* Color marrón oscuro para texto */
+    background-color: #f8e9e6;
+    /* Fondo rosado muy claro */
+    border-radius: 16px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+    line-height: 1.8;
+    transition: transform 0.3s ease;
+}
+
+/* Efecto de elevación al pasar el mouse */
+.historia-perrito:hover {
+    transform: translateY(-4px);
+}
+
+/* Estilo para el título principal */
+.historia-perrito h1 {
+    text-align: center;
+    color: #e89888;
+    /* Color rosado */
+    font-size: 2.2em;
+    margin-bottom: 30px;
+    position: relative;
+    font-weight: bold;
+}
+
+/* Línea decorativa bajo el título */
+.historia-perrito h1::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: #F4B6A9;
+    margin: 10px auto 0;
+    border-radius: 4px;
+}
+
+/* Subtítulos */
+.historia-perrito h3 {
+    color: #5C4033;
+    margin-top: 30px;
+    font-size: 1.3em;
+}
+
+/* Párrafos */
+.historia-perrito p {
+    margin-top: 10px;
+    font-size: 1.05em;
+    text-align: justify;
+}
+
+/* ==================== BOTÓN DE ADOPCIÓN ==================== */
+
+/* Contenedor del botón */
+.boton-adoptar-container {
+    text-align: center;
+    margin: 40px 0;
+}
+
+/* Estilo del botón principal */
+.boton-adoptar {
+    background-color: #F4B6A9;
+    color: #5C4033;
+    border: none;
+    padding: 12px 30px;
+    font-size: 1.2em;
+    border-radius: 50px;
+    /* Bordes completamente redondeados */
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(244, 182, 169, 0.3);
+}
+
+/* Efectos interactivos del botón */
+.boton-adoptar:hover {
+    background-color: #e8a294;
+    /* Color más oscuro al hover */
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(244, 182, 169, 0.4);
+}
+
+.boton-adoptar:active {
+    transform: translateY(1px);
+    /* Efecto de presión */
+}
+
+/* ==================== MODAL DE ADOPCIÓN ==================== */
+
+/* Fondo del modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 10000;
+    /* Valor más alto para seguridad */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    overflow: auto;
+    -webkit-backdrop-filter: blur(3px);
+    backdrop-filter: blur(3px);
+}
+
+
+/* Contenido del modal */
+.modal-contenido {
+    background-color: #FFF7F5;
+    margin: 8% auto;
+    padding: 25px;
+    border-radius: 12px;
+    max-width: 450px;
+    width: 85%;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+    animation: modalFadeIn 0.3s ease-out forwards;
+    position: relative;
+    /* Necesario para el botón cerrar */
+}
+
+
+/* Animación de aparición del modal */
+@keyframes modalFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Título del modal */
+.modal-contenido h2 {
+    color: #5C4033;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.6em;
+    font-weight: 600;
+}
+
+/* Botón de cerrar */
+.cerrar {
+    color: #aaa;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.2s;
+    padding: 5px 10px;
+    line-height: 1;
+    z-index: 1050;
+    background: none;
+    border: none;
+}
+
+.cerrar:hover {
+    color: #5C4033;
+}
+
+/* ==================== FORMULARIO DE ADOPCIÓN ==================== */
+
+/* Estructura del formulario */
+.modal-contenido form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    /* Reducido de 15px */
+}
+
+/* Etiquetas de los campos */
+.modal-contenido label {
+    color: #5C4033;
+    font-weight: 500;
+    margin-bottom: -10px;
+}
+
+/* Campos de entrada */
+.modal-contenido input,
+.modal-contenido textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 6px;
+    border: 1px solid #F4B6A9;
+    background-color: #FFF7F5;
+    color: #5C4033;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.95em;
+}
+
+/* Efecto de focus en los campos */
+.modal-contenido input:focus,
+.modal-contenido textarea:focus {
+    outline: none;
+    border-color: #e8a294;
+    box-shadow: 0 0 0 2px rgba(244, 182, 169, 0.3);
+}
+
+/* Área de texto */
+.modal-contenido textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+.boton-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    width: 100%;
+}
+
+/* Botón de enviar */
+.enviar-btn {
+    background-color: #F4B6A9;
+    color: #5C4033;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 8px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    width: auto;
+    text-align: center;
+}
+
+/* Efectos del botón de enviar */
+.enviar-btn:hover {
+    background-color: #e8a294;
+    transform: translateY(-2px);
+}
+
+.enviar-btn:active {
+    transform: translateY(1px);
+}
+
+/* Estilos para notificaciones */
+.notificacion-flotante {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 15px 25px;
+    border-radius: 8px;
+    color: white;
+    background: #4CAF50;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    z-index: 10000;
+    transform: translateY(100px);
+    opacity: 0;
+    transition: all 0.3s ease;
+    max-width: 300px;
+}
+
+.notificacion-flotante.mostrar {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.notificacion-flotante p {
+    margin: 0;
+    padding: 0;
+}
+
+.notificacion-error {
+    background: #f44336 !important;
+}
+
+/* ==================== DISEÑO RESPONSIVE ==================== */
+
+@media screen and (max-width: 768px) {
+    .historia-perrito {
+        padding: 25px;
+        margin: 30px 20px;
+    }
+
+    .historia-perrito h1 {
+        font-size: 1.9em;
+    }
+
+    .historia-perrito h3 {
+        font-size: 1.15em;
+    }
+
+    .historia-perrito p {
+        font-size: 1em;
+    }
+
+    .boton-adoptar {
+        font-size: 1.05em;
+        padding: 10px 24px;
+    }
+
+    .modal-contenido {
+        padding: 20px;
+        margin: 10% auto;
+        max-width: 90%;
+    }
+
+    .modal-contenido h2 {
+        font-size: 1.4em;
+    }
+
+    .modal-contenido input,
+    .modal-contenido textarea {
+        font-size: 0.95em;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .historia-perrito {
+        padding: 20px;
+        margin: 25px 15px;
+    }
+
+    .historia-perrito h1 {
+        font-size: 1.6em;
+    }
+
+    .historia-perrito h3 {
+        font-size: 1.05em;
+    }
+
+    .historia-perrito p {
+        font-size: 0.95em;
+    }
+
+    .boton-adoptar {
+        font-size: 1em;
+        padding: 10px 20px;
+    }
+
+    .modal-contenido {
+        padding: 18px;
+        margin: 12% auto;
+        max-width: 95%;
+    }
+
+    .modal-contenido h2 {
+        font-size: 1.3em;
+    }
+
+    .modal-contenido input,
+    .modal-contenido textarea {
+        padding: 8px;
+        font-size: 0.9em;
+    }
+
+    .boton-container {
+        flex-direction: column;
+    }
+
+    .enviar-btn {
+        width: 100%;
+    }
+
+    .notificacion-flotante {
+        bottom: 15px;
+        right: 15px;
+        max-width: 90%;
+        padding: 12px 20px;
+        font-size: 0.95em;
+    }
+}

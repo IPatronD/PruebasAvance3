@@ -1,0 +1,825 @@
+/* ============================================= */
+/* RESET Y ESTILOS BASE */
+/* ============================================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #FFF9F4;
+  color: #5C4033;
+  padding-top: 100px;
+  line-height: 1.6;
+}
+
+/* ============================================= */
+/* ESTRUCTURA PRINCIPAL */
+/* ============================================= */
+header {
+  background-color: #FFE4D0;
+  padding: 10px 30px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 120px;
+  z-index: 1000;
+  border-bottom: 2px solid #F4B6A9;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0.3rem 0;
+  gap: 2rem;
+}
+
+
+/* ============================================= */
+/* COMPONENTES DEL HEADER */
+/* ============================================= */
+/* Logo */
+.logo img {
+  width: 85px;
+  height: 85px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  border: 2px solid #FFF7EF;
+}
+
+.logo img:hover {
+  transform: scale(1.05);
+}
+
+/* Menú principal */
+.menu {
+  display: flex;
+  gap: 6.6rem;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu a {
+  color: #5C4033;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.05rem;
+  position: relative;
+  padding: 0.5rem 0;
+  transition: all 0.3s ease;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+}
+
+.menu a:hover {
+  color: #F4B6A9;
+}
+
+.menu a:not(.submenu-trigger):after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #F4B6A9;
+  transition: width 0.3s ease;
+}
+
+.menu a:hover:after {
+  width: 100%;
+}
+
+/* Submenú */
+.submenu {
+  position: relative;
+}
+
+.submenu-trigger {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  cursor: pointer;
+}
+
+.submenu-trigger::after {
+  font-size: 0.8em;
+  transition: transform 0.3s ease;
+}
+
+.submenu:hover .submenu-trigger::after {
+  transform: rotate(180deg);
+}
+
+.submenu-opciones {
+  display: none;
+  position: absolute;
+  top: 90%;
+  left: 0;
+  background-color: #FFF7F5;
+  border: 1px solid #F4B6A9;
+  border-radius: 8px;
+  min-width: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  z-index: 999;
+  padding: 0.4rem 0;
+  margin-top: 0;
+  flex-direction: column;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.submenu-opciones::before {
+  content: '';
+  position: absolute;
+  top: -6px;
+  left: 0;
+  right: 0;
+  height: 6px;
+}
+
+.submenu:hover .submenu-opciones,
+.submenu-opciones:hover {
+  display: block;
+}
+
+.submenu-opciones a {
+  display: block;
+  padding: 0.4rem 1rem;
+  font-weight: 500;
+  font-size: 0.9rem;
+  line-height: 1.3;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.submenu-opciones a:hover {
+  background-color: #FCE9E1;
+  color: #F4B6A9;
+}
+
+/* ============================================= */
+/* MENÚ HAMBURGUESA (SOLO MÓVIL) */
+/* ============================================= */
+.menu-hamburguesa {
+  display: none;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 10px;
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1001;
+}
+
+.barra-hamburguesa {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 4px 0;
+  background-color: #5C4033;
+  transition: all 0.3s ease;
+  border-radius: 2px;
+}
+
+.menu-hamburguesa.activo .barra-hamburguesa:nth-child(1) {
+  transform: translateY(9px) rotate(45deg);
+}
+
+.menu-hamburguesa.activo .barra-hamburguesa:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-hamburguesa.activo .barra-hamburguesa:nth-child(3) {
+  transform: translateY(-9px) rotate(-45deg);
+}
+
+/* ============================================= */
+/* FOOTER */
+/* ============================================= */
+.footer {
+  background-color: #FFE4D0;
+  color: #5C4033;
+  padding: 2rem 1rem 1rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  min-height: 50vh;
+}
+
+.footer-contenedor {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 2rem;
+}
+
+
+.footer-logo h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.footer-links h3,
+.footer-contact h3 {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+}
+
+.footer-links a,
+.footer-contact a {
+  color: #5C4033;
+  text-decoration: none;
+  font-size: 0.95rem;
+  display: block;
+  margin-bottom: 0.7rem;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover,
+.footer-contact a:hover {
+  color: #F4B6A9;
+}
+
+.footer-social {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.footer-social img {
+  width: 24px;
+  height: 24px;
+  filter: brightness(0);
+  transition: all 0.3s ease;
+}
+
+.footer-social img:hover {
+  transform: scale(1.15);
+  filter: brightness(0) invert(60%) sepia(100%) saturate(500%) hue-rotate(-20deg);
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: auto;
+  padding-top: 1.5rem;
+  font-size: 0.85rem;
+  border-top: 1px solid rgba(92, 64, 51, 0.1);
+}
+
+/* ============================================= */
+/* COMPONENTES REUTILIZABLES */
+/* ============================================= */
+.btn-primario {
+  background-color: #F4B6A9;
+  color: #5C4033;
+  border: none;
+  padding: 0.8rem 1.8rem;
+  border-radius: 2rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-block;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.btn-primario:hover {
+  background-color: #f8c8bd;
+  transform: translateY(-2px);
+}
+
+.btn-adoptar {
+  background-color: #F4B6A9;
+  color: #5C4033;
+  border: none;
+  padding: 0.8rem 2.5rem;
+  border-radius: 2rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-block;
+  text-decoration: none;
+  font-size: 1.1rem;
+  margin-top: 1.5rem;
+  box-shadow: 0 4px 8px rgba(244, 182, 169, 0.3);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.btn-adoptar:hover {
+  background-color: #f8c8bd;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(244, 182, 169, 0.4);
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1s ease-in forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ============================================= */
+/* CURSOR PERSONALIZADO GLOBAL */
+/* ============================================= */
+
+/* Base */
+html,
+body,
+body *:not(button):not(a):not(input):not(textarea):not(select) {
+  cursor: url('./cursor.png') 16 16, auto;
+}
+
+/* Elementos interactivos */
+a,
+button,
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+.btn-primario,
+.btn-adoptar,
+.menu-item,
+.dropdown-item,
+.card,
+.carousel-item,
+.accordion-button,
+.nav-link,
+.pagination-link,
+.footer-link,
+.social-icon,
+.form-control:focus {
+  cursor: url('./cursor.png') 16 16, pointer !important;
+}
+
+/* Hover */
+a:hover,
+button:hover,
+.btn-primario:hover,
+.btn-adoptar:hover,
+.menu-item:hover,
+.footer-link:hover,
+.social-icon:hover {
+  cursor: url('./huellitaClick.png') 16 16, pointer !important;
+}
+
+/* Active */
+:active,
+.btn-primario:active,
+.btn-adoptar:active,
+.menu-item:active,
+.footer-link:active {
+  cursor: url('./huellitaClick.png') 16 16, auto !important;
+}
+
+/* ============================================= */
+/* EFECTOS DE INTERACCIÓN GLOBALES */
+/* ============================================= */
+
+/* Transiciones */
+button,
+.btn,
+.btn-primario,
+.btn-adoptar,
+input[type="button"],
+input[type="submit"] {
+  transition: all 0.2s ease;
+  transform-origin: center;
+}
+
+/* Efecto click */
+:is(a, button, .btn, .card, .menu-item,
+  .footer-link, .social-icon):active {
+  transform: scale(0.97);
+  opacity: 0.9;
+}
+
+/* Efecto hover */
+:is(a, button, .btn, .menu-item, .footer-link):hover {
+  filter: brightness(1.05);
+}
+
+/* ============================================= */
+/* COMPONENTES ESPECÍFICOS */
+/* ============================================= */
+
+/* Menú principal */
+.menu a:active {
+  color: #f4a999;
+  background-color: rgba(244, 182, 169, 0.1);
+}
+
+.menu a:active:after {
+  width: 100%;
+  background-color: #f4a999;
+}
+
+/* Footer */
+.footer-links a:active,
+.footer-contact a:active {
+  transform: scale(0.98);
+  color: #f4a999;
+}
+
+.footer-social img:active {
+  transform: scale(0.95);
+  filter: brightness(0.8);
+}
+
+/* Submenú */
+.submenu-opciones a:active {
+  background-color: #fce9e1;
+  padding-left: 1.2rem;
+}
+
+/* Formularios */
+input:focus,
+textarea:focus,
+select:focus {
+  cursor: url('./cursor.png') 16 16, text !important;
+}
+
+/* ============================================= */
+/* ESTILOS PARA EL MAPA CON CURSORES PERSONALIZADOS */
+/* ============================================= */
+
+.acordeon-preguntas,
+.acordeon-preguntas h1 {
+  cursor: url('./cursor.png') 16 16, auto;
+}
+
+.item {
+  cursor: url('./cursor.png') 16 16, auto;
+}
+
+.pregunta {
+  cursor: url('./cursor.png') 16 16, pointer !important;
+  transition: all 0.3s ease;
+}
+
+.pregunta:hover {
+  cursor: url('./huellitaClick.png') 16 16, pointer !important;
+  color: #F4B6A9;
+}
+
+.pregunta:active {
+  cursor: url('./huellitaClick.png') 16 16, auto !important;
+  transform: scale(0.98);
+}
+
+.flecha {
+  cursor: url('./cursor.png') 16 16, pointer !important;
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.pregunta:hover .flecha {
+  cursor: url('./huellitaClick.png') 16 16, pointer !important;
+  color: #F4B6A9;
+}
+
+.respuesta {
+  cursor: url('./cursor.png') 16 16, auto !important;
+}
+
+/* Estado activo del acordeón */
+.item.active .flecha {
+  transform: rotate(90deg);
+  cursor: url('./huellitaClick.png') 16 16, pointer !important;
+}
+
+.item.active .pregunta {
+  color: #F4B6A9;
+  cursor: url('./huellitaClick.png') 16 16, pointer !important;
+}
+
+.mapa-contenedor {
+  cursor: url('./cursor.png') 16 16, auto !important;
+}
+
+.mapa-contenedor iframe {
+  cursor: url('./cursor.png') 16 16, auto !important;
+}
+
+/* Estados interactivos */
+.mapa-contenedor:hover,
+.mapa-contenedor iframe:hover {
+  cursor: url('./huellitaClick.png') 16 16, pointer !important;
+}
+
+.mapa-contenedor:active,
+.mapa-contenedor iframe:active {
+  cursor: url('./huellitaClick.png') 16 16, auto !important;
+}
+
+/* Fallback para sin internet */
+.mapa-fallback {
+  cursor: url('./cursor.png') 16 16, auto !important;
+}
+
+.mapa-fallback:hover {
+  cursor: url('./huellitaClick.png') 16 16, pointer !important;
+}
+
+/* Botón "Cómo llegar" */
+.boton-mapa {
+  cursor: url('./huellitaClick.png') 16 16, pointer !important;
+}
+
+.boton-mapa:hover {
+  cursor: url('./huellitaClick.png') 16 16, pointer !important;
+}
+
+.boton-mapa:active {
+  cursor: url('./huellitaClick.png') 16 16, auto !important;
+}
+
+/* Cursor general */
+body,
+body *:not(button):not(a):not(input):not(textarea):not(select) {
+  cursor: url('./cursor.png') 16 16, auto;
+}
+
+/* Elementos clickeables: cambia a huellita al pasar el mouse */
+a:hover,
+button:hover,
+.btn-adoptar:hover,
+.btn-primario:hover,
+.menu a:hover,
+.submenu-trigger:hover,
+input[type="submit"]:hover,
+input[type="button"]:hover,
+.card:hover,
+.accordion-button:hover,
+.pregunta:hover,
+.mapa-contenedor:hover,
+.mapa-contenedor iframe:hover,
+.boton-mapa:hover,
+.collage img:hover,
+.carousel-item:hover,
+.carousel-control-prev:hover,
+.carousel-control-next:hover,
+.carousel-indicators button:hover {
+  cursor: url('./huellitaClick.png') 16 16, pointer !important;
+}
+
+/* Estado activo (al hacer clic) */
+a:active,
+button:active,
+.btn-adoptar:active,
+.btn-primario:active,
+.card:active,
+.boton-mapa:active,
+.collage img:active,
+.carousel-item:active {
+  cursor: url('./huellitaClick.png') 16 16, auto !important;
+}
+
+/* ============================================= */
+/* EXCEPCIONES */
+/* ============================================= */
+
+/* Campos de texto */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea,
+select {
+  cursor: text !important;
+}
+
+/* Elementos deshabilitados */
+:disabled,
+.disabled {
+  cursor: not-allowed !important;
+  transform: none !important;
+}
+
+/* ============================ */
+/* TABLETS GRANDES Y LAPTOPS   */
+/* ============================ */
+@media (max-width: 1024px) {
+  body {
+    padding-top: 140px;
+  }
+
+  .menu {
+    gap: 2.5rem;
+  }
+}
+
+/* ============================ */
+/* TABLETS / MÓVILES MEDIANOS  */
+/* ============================ */
+@media (max-width: 768px) {
+  body {
+    padding-top: 100px;
+  }
+
+  header {
+    height: 100px;
+    padding: 12px 20px;
+  }
+
+  nav {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .logo img {
+    width: 65px;
+    height: 65px;
+  }
+
+  .menu-hamburguesa {
+    display: block;
+  }
+
+  .barra-hamburguesa {
+    width: 30px;
+    height: 3px;
+    margin: 6px auto;
+  }
+
+  .menu {
+    position: fixed;
+    top: 100px;
+    right: -100%;
+    width: 280px;
+    height: calc(100vh - 100px);
+    background-color: #FFF7EF;
+    flex-direction: column;
+    gap: 0;
+    padding: 1rem 0;
+    transition: right 0.3s ease;
+    box-shadow: -2px 0 15px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    overflow-y: auto;
+    align-items: flex-start;
+  }
+
+  .menu.activo {
+    right: 0;
+  }
+
+  .menu a,
+  .submenu-trigger {
+    font-size: 1.4rem;
+    padding: 1rem 1.5rem;
+    width: 100%;
+    text-align: left;
+  }
+
+  .submenu {
+    width: 100%;
+  }
+
+  .submenu-opciones {
+    position: relative;
+    top: 0;
+    left: 0;
+    background-color: rgba(252, 233, 225, 0.5);
+    border: none;
+    box-shadow: none;
+    width: 100%;
+    padding: 0.3rem 0;
+    display: none;
+  }
+
+  .submenu-opciones a {
+    padding: 0.8rem 2rem;
+    font-size: 1.2rem;
+  }
+
+  .submenu.activo .submenu-opciones {
+    display: block;
+  }
+
+  .footer {
+    padding: 2rem 1.5rem;
+  }
+
+  .footer-contenedor {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 2rem;
+  }
+
+  .footer-logo h2 {
+    font-size: 1.6rem;
+  }
+
+  .footer-links h3,
+  .footer-contact h3 {
+    font-size: 1.2rem;
+  }
+
+  .footer-links a,
+  .footer-contact a {
+    font-size: 0.9rem;
+  }
+
+  .footer-social {
+    justify-content: center;
+    margin-top: 1rem;
+  }
+
+  .footer-bottom {
+    font-size: 0.8rem;
+    margin-top: 2rem;
+    padding-top: 1rem;
+  }
+}
+
+/* ============================ */
+/* CELULARES PEQUEÑOS          */
+/* ============================ */
+@media (max-width: 480px) {
+  body {
+    padding-top: 100px;
+  }
+
+  header {
+    height: 90px;
+    padding: 10px 15px;
+  }
+
+  .logo img {
+    width: 55px;
+    height: 55px;
+  }
+
+  .menu {
+    width: 85%;
+    padding: 0.5rem 0;
+  }
+
+  .menu a,
+  .submenu-trigger {
+    font-size: 1.2rem;
+    padding: 0.8rem 1.2rem;
+  }
+
+  .submenu-opciones a {
+    font-size: 1rem;
+    padding: 0.6rem 1.5rem;
+  }
+
+  .footer {
+    padding: 1.5rem 1rem;
+  }
+
+  .footer-logo h2 {
+    font-size: 1.4rem;
+  }
+
+  .footer-links h3,
+  .footer-contact h3 {
+    font-size: 1.1rem;
+  }
+
+  .footer-links a,
+  .footer-contact a {
+    font-size: 0.85rem;
+  }
+
+  .footer-social img {
+    width: 22px;
+    height: 22px;
+  }
+
+  .footer-bottom {
+    font-size: 0.75rem;
+  }
+}

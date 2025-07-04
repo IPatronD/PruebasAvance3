@@ -1,0 +1,223 @@
+main.sitio {
+    background-color: transparent;
+    text-align: center;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    max-width: 1000px;
+    width: 100%;
+    padding: 40px;
+    border-radius: 12px;
+    background-color: #FFF7F5;
+    border: 2px solid #F4B6A9;
+    box-shadow: 0 10px 25px rgba(92, 64, 51, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2rem auto;
+    margin-bottom: 2rem;
+}
+
+h1 {
+    color: #5C4033;
+    margin-bottom: 25px;
+    font-size: 2.5em;
+    font-weight: 600;
+    text-align: center;
+}
+
+p {
+    font-size: 1.1em;
+    color: #7A5C4B;
+    margin-bottom: 30px;
+    max-width: 800px;
+    text-align: center;
+}
+
+.sitemap-section {
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+.sitemap-section h2 {
+    color: #5C4033;
+    font-size: 1.8em;
+    border-bottom: 2px solid #F4B6A9;
+    padding-bottom: 10px;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+ul li {
+    background-color: #FFE4D0;
+    border-left: 6px solid #F4B6A9;
+    border-radius: 10px;
+    padding: 20px;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+ul li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(92, 64, 51, 0.2);
+}
+
+ul li a {
+    color: #5C4033;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.2em;
+    margin-bottom: 8px;
+    transition: color 0.3s ease;
+}
+
+ul li a:hover {
+    color: #E07A5F;
+}
+
+ul li p.description {
+    font-size: 0.95em;
+    color: #7A5C4B;
+    margin: 0;
+    text-align: center;
+    max-width: 90%;
+}
+
+/* ==================== RESPONSIVO PARA PANTALLAS MEDIANAS Y PEQUEÑAS ==================== */
+@media (max-width: 1024px) {
+
+    /* Ajuste en el main */
+    main.sitio {
+        padding: 15px;
+        /* Reducir padding en pantallas medianas */
+    }
+
+    .container {
+        padding: 25px;
+    }
+
+    h1 {
+        font-size: 2.3em;
+        /* Ajustar tamaño del título */
+    }
+
+    p {
+        font-size: 1.1em;
+        /* Ajustar tamaño de párrafo */
+    }
+
+    .sitemap-section h2 {
+        font-size: 1.7em;
+        /* Reducir tamaño de encabezado */
+    }
+
+    /* Ajustar el grid de sitemap-section para pantallas medianas */
+    .sitemap-section ul {
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        /* Disminuir columnas en pantallas medianas */
+        gap: 15px;
+    }
+}
+
+/* ==================== RESPONSIVO PARA PANTALLAS PEQUEÑAS (max-width: 768px) ==================== */
+@media (max-width: 768px) {
+
+    /* Ajuste en el main */
+    main.sitio {
+        padding: 10px;
+        /* Menos padding para pantallas más pequeñas */
+    }
+
+    .container {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 2em;
+        /* Reducir aún más el título */
+    }
+
+    p {
+        font-size: 1.05em;
+        /* Reducir el tamaño de texto */
+    }
+
+    .sitemap-section h2 {
+        font-size: 1.6em;
+    }
+
+    /* Ajuste más pequeño en las columnas */
+    .sitemap-section ul {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        /* Columna más pequeña en pantallas de 768px */
+        gap: 12px;
+    }
+
+    ul li {
+        padding: 12px;
+    }
+}
+
+/* ==================== RESPONSIVO PARA PANTALLAS MUY PEQUEÑAS (max-width: 480px) ==================== */
+@media (max-width: 480px) {
+
+    /* Ajuste en el main */
+    main.sitio {
+        padding: 8px;
+        /* Reducir aún más el padding */
+    }
+
+    .container {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 1.7em;
+        /* Reducir más el tamaño del título */
+    }
+
+    p {
+        font-size: 1em;
+        /* Ajustar el tamaño de párrafo */
+    }
+
+    .sitemap-section h2 {
+        font-size: 1.4em;
+    }
+
+    /* Hacer las listas más pequeñas y adaptadas a pantallas pequeñas */
+    .sitemap-section ul {
+        grid-template-columns: 1fr;
+        /* Solo una columna en pantallas de 480px */
+        gap: 10px;
+    }
+
+    ul li {
+        padding: 10px;
+    }
+
+    ul li a {
+        font-size: 0.95em;
+        /* Hacer los enlaces un poco más pequeños */
+    }
+
+    ul li p.description {
+        font-size: 0.85em;
+        /* Ajustar el tamaño de la descripción */
+    }
+}

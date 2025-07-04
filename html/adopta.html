@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colitas Felices :: Adopta</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/styleAdopta.css">
+    <link rel="icon" href="../img/logo/Logo.png" type="image/png">
+</head>
+
+<body>
+
+    <!-- Menú de opciones -->
+    <!-- Header -->
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="../index.html">
+                    <img src="../img/logo/Logo.png" alt="Logo Colitas Felices">
+                </a>
+            </div>
+
+            <!-- Botón hamburguesa (solo visible en móvil) -->
+            <button class="menu-hamburguesa" aria-label="Menú">
+                <span class="barra-hamburguesa"></span>
+                <span class="barra-hamburguesa"></span>
+                <span class="barra-hamburguesa"></span>
+            </button>
+
+            <!-- Menú normal (visible en desktop) -->
+            <div class="menu">
+                <a href="./nosotros.html">Nosotros</a>
+                <a href="./adopta.html">Adopta</a>
+                <a href="./dudas.html">Dudas</a>
+                <a href="./dona.html">Dona</a>
+                <a href="./contacto.html">Contacto</a>
+
+                <!-- Menú de cuenta (se actualiza automáticamente) -->
+                <div class="submenu">
+                    <a href="#" class="submenu-trigger">Mi Cuenta <span class="submenu-icon">▾</span></a>
+                    <div class="submenu-opciones">
+                        <!-- Contenido dinámico (se llena con auth-state.js) -->
+                        <a href="./iniciarSesion.html">Iniciar Sesión</a>
+                        <a href="./registrate.html">Registrate</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="filtros">
+            <h2>Filtrar Mascotas</h2>
+            <div class="filtros-container">
+                <!-- PRIMER GRUPO (arriba) -->
+                <div class="filtros-superiores">
+                    <div class="filtro-grupo">
+                        <label for="tipo">Tipo:</label>
+                        <select id="tipo">
+                            <option value="todos">Todos</option>
+                            <option value="perro">Perros</option>
+                            <option value="gato">Gatos</option>
+                        </select>
+                    </div>
+
+                    <div class="filtro-grupo">
+                        <label for="tamano">Tamaño:</label>
+                        <select id="tamano">
+                            <option value="todos">Todos</option>
+                            <option value="pequeno">Pequeño</option>
+                            <option value="mediano">Mediano</option>
+                            <option value="grande">Grande</option>
+                        </select>
+                    </div>
+
+                    <div class="filtro-grupo">
+                        <label for="edad">Edad:</label>
+                        <select id="edad">
+                            <option value="todos">Todos</option>
+                            <option value="cachorro">Cachorro</option>
+                            <option value="joven">Joven</option>
+                            <option value="adulto">Adulto</option>
+                            <option value="senior">Senior</option>
+                        </select>
+                    </div>
+
+                    <div class="filtro-grupo">
+                        <label for="sexo">Sexo:</label>
+                        <select id="sexo">
+                            <option value="todos">Todos</option>
+                            <option value="macho">Macho</option>
+                            <option value="hembra">Hembra</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- SEGUNDO GRUPO (abajo) -->
+                <div class="filtros-inferiores">
+                    <div class="filtro-grupo">
+                        <label for="ninos">Compatibilidad con niños:</label>
+                        <select id="ninos">
+                            <option value="todos">Todos</option>
+                            <option value="si">Sí</option>
+                            <option value="no">No</option>
+                        </select>
+                    </div>
+
+                    <div class="filtro-con-boton">
+                        <div class="filtro-grupo">
+                            <label for="otros-animales">Convive con otros animales:</label>
+                            <select id="otros-animales">
+                                <option value="todos">Todos</option>
+                                <option value="si">Sí</option>
+                                <option value="no">No</option>
+                            </select>
+                        </div>
+
+                        <div class="filtro-grupo">
+                            <label style="visibility: hidden;">Oculto</label>
+                            <button id="limpiar-filtros">Limpiar Filtros</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="cards-grid">
+            <!-- Primera fila (Perritos) -->
+            <div class="card-container" data-tamano="grande" data-edad="adulto" data-sexo="macho" data-tipo="perro"
+                data-ninos="si" data-otros-animales="si">
+                <a href="./PerritoPedro.html" class="card">
+                    <img src="../img/perritos/pedro.jpeg" alt="Perrito Pedro" class="dog-img">
+                    <div class="basic-info">
+                        <h2>PEDRO</h2>
+                        <p class="subtitle">ADOPTA</p>
+                    </div>
+                    <div class="detailed-info">
+                        <h2>PEDRO</h2>
+                        <p>ADOPTA</p>
+                        <p>Tipo: Perro</p>
+                        <p>Sexo: Macho</p>
+                        <p>Edad: Adulto (6 años)</p>
+                        <p>Tamaño: Grande (30 kilos)</p>
+                        <p>Tranquilo, protector y leal</p>
+                        <p>Vacunado y esterilizado</p>
+                        <p>Compatible con niños: Sí</p>
+                        <p>Convive con otros animales: Sí</p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="card-container" data-tamano="mediano" data-edad="joven" data-sexo="hembra" data-tipo="perro"
+                data-ninos="si" data-otros-animales="si">
+                <a href="./PerritoAlfa.html" class="card">
+                    <img src="../img/perritos/alfa.jpeg" alt="Perrito Alfa" class="dog-img">
+                    <div class="basic-info">
+                        <h2>ALFA</h2>
+                        <p class="subtitle">ADOPTA</p>
+                    </div>
+                    <div class="detailed-info">
+                        <h2>ALFA</h2>
+                        <p>ADOPTA</p>
+                        <p>Tipo: Perro</p>
+                        <p>Sexo: Hembra</p>
+                        <p>Edad: Joven (2 años)</p>
+                        <p>Tamaño: Mediano (18 kilos)</p>
+                        <p>Juguetona y sociable</p>
+                        <p>Esterilizada y sana</p>
+                        <p>Compatible con niños: Sí</p>
+                        <p>Convive con otros animales: Sí</p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="card-container" data-tamano="pequeno" data-edad="joven" data-sexo="macho" data-tipo="perro"
+                data-ninos="si" data-otros-animales="si">
+                <a href="./PerritoBalloo.html" class="card">
+                    <img src="../img/perritos/balloo.jpeg" alt="Perrito Balloo" class="dog-img">
+                    <div class="basic-info">
+                        <h2>BALLOO</h2>
+                        <p class="subtitle">ADOPTA</p>
+                    </div>
+                    <div class="detailed-info">
+                        <h2>BALLOO</h2>
+                        <p>ADOPTA</p>
+                        <p>Tipo: Perro</p>
+                        <p>Sexo: Macho</p>
+                        <p>Edad: Joven (1 año)</p>
+                        <p>Tamaño: Pequeño (7 kilos)</p>
+                        <p>Curioso y amigable</p>
+                        <p>Vacunas al día</p>
+                        <p>Compatible con niños: Sí</p>
+                        <p>Convive con otros animales: Sí</p>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Segunda fila (Perritos) -->
+            <div class="card-container" data-tamano="grande" data-edad="senior" data-sexo="macho" data-tipo="perro"
+                data-ninos="no" data-otros-animales="si">
+                <a href="./PerritoChester.html" class="card">
+                    <img src="../img/perritos/chester.jpeg" alt="Perrito Chester" class="dog-img">
+                    <div class="basic-info">
+                        <h2>CHESTER</h2>
+                        <p class="subtitle">ADOPTA</p>
+                    </div>
+                    <div class="detailed-info">
+                        <h2>CHESTER</h2>
+                        <p>ADOPTA</p>
+                        <p>Tipo: Perro</p>
+                        <p>Sexo: Macho</p>
+                        <p>Edad: Senior (9 años)</p>
+                        <p>Tamaño: Grande (28 kilos)</p>
+                        <p>Dormilón y noble</p>
+                        <p>Necesita hogar tranquilo</p>
+                        <p>Compatible con niños: No</p>
+                        <p>Convive con otros animales: Sí</p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="card-container" data-tamano="mediano" data-edad="adulto" data-sexo="hembra" data-tipo="perro"
+                data-ninos="si" data-otros-animales="si">
+                <a href="./PerritoMullet.html" class="card">
+                    <img src="../img/perritos/mullet.jpeg" alt="Perrito Mullet" class="dog-img">
+                    <div class="basic-info">
+                        <h2>MULLET</h2>
+                        <p class="subtitle">ADOPTA</p>
+                    </div>
+                    <div class="detailed-info">
+                        <h2>MULLET</h2>
+                        <p>ADOPTA</p>
+                        <p>Tipo: Perro</p>
+                        <p>Sexo: Hembra</p>
+                        <p>Edad: Adulta (5 años)</p>
+                        <p>Tamaño: Mediano (20 kilos)</p>
+                        <p>Inteligente y obediente</p>
+                        <p>Ideal para familia activa</p>
+                        <p>Compatible con niños: Sí</p>
+                        <p>Convive con otros animales: Sí</p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="card-container" data-tamano="mediano" data-edad="joven" data-sexo="macho" data-tipo="perro"
+                data-ninos="si" data-otros-animales="si">
+                <a href="./PerritoRoy.html" class="card">
+                    <img src="../img/perritos/roy.jpeg" alt="Perrito Roy" class="dog-img">
+                    <div class="basic-info">
+                        <h2>ROY</h2>
+                        <p class="subtitle">ADOPTA</p>
+                    </div>
+                    <div class="detailed-info">
+                        <h2>ROY</h2>
+                        <p>ADOPTA</p>
+                        <p>Tipo: Perro</p>
+                        <p>Sexo: Macho</p>
+                        <p>Edad: Joven (3 años)</p>
+                        <p>Tamaño: Mediano (24 kilos)</p>
+                        <p>Energético y cariñoso</p>
+                        <p>Vacunado, listo para jugar</p>
+                        <p>Compatible con niños: Sí</p>
+                        <p>Convive con otros animales: Sí</p>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Tercera fila (Perritos) -->
+            <div class="card-container" data-tamano="pequeno" data-edad="joven" data-sexo="macho" data-tipo="perro"
+                data-ninos="si" data-otros-animales="si">
+                <a href="./PerritoToby.html" class="card">
+                    <img src="../img/perritos/perrito9.jpg" alt="Perrito Toby" class="dog-img">
+                    <div class="basic-info">
+                        <h2>TOBY</h2>
+                        <p class="subtitle">ADOPTA</p>
+                    </div>
+                    <div class="detailed-info">
+                        <h2>TOBY</h2>
+                        <p>ADOPTA</p>
+                        <p>Tipo: Perro</p>
+                        <p>Sexo: Macho</p>
+                        <p>Edad: Joven (2 años)</p>
+                        <p>Tamaño: Pequeño (6 kilos)</p>
+                        <p>Juguetón y cariñoso</p>
+                        <p>Vacunado y esterilizado</p>
+                        <p>Compatible con niños: Sí</p>
+                        <p>Convive con otros animales: Sí</p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="card-container" data-tamano="mediano" data-edad="adulto" data-sexo="macho" data-tipo="perro"
+                data-ninos="si" data-otros-animales="no">
+                <a href="./PerritoMax.html" class="card">
+                    <img src="../img/perritos/perrito8.jpg" alt="Perrito Max" class="dog-img">
+                    <div class="basic-info">
+                        <h2>MAX</h2>
+                        <p class="subtitle">ADOPTA</p>
+                    </div>
+                    <div class="detailed-info">
+                        <h2>MAX</h2>
+                        <p>ADOPTA</p>
+                        <p>Tipo: Perro</p>
+                        <p>Sexo: Macho</p>
+                        <p>Edad: Adulto (4 años)</p>
+                        <p>Tamaño: Mediano (22 kilos)</p>
+                        <p>Leal y protector</p>
+                        <p>Esterilizado</p>
+                        <p>Compatible con niños: Sí</p>
+                        <p>Convive con otros animales: No</p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="card-container" data-tamano="mediano" data-edad="adulto" data-sexo="macho" data-tipo="perro"
+                data-ninos="si" data-otros-animales="si">
+                <a href="./PerritoSimon.html" class="card">
+                    <img src="../img/perritos/Simon.jpeg" alt="Perrito Simon" class="dog-img">
+                    <div class="basic-info">
+                        <h2>SIMON</h2>
+                        <p class="subtitle">ADOPTA</p>
+                    </div>
+                    <div class="detailed-info">
+                        <h2>SIMON</h2>
+                        <p>ADOPTA</p>
+                        <p>Tipo: Perro</p>
+                        <p>Sexo: Macho</p>
+                        <p>Edad: Adulto (5 años)</p>
+                        <p>Tamaño: Mediano (25 kilos)</p>
+                        <p>Tranquilo y amigable</p>
+                        <p>Vacunado</p>
+                        <p>Compatible con niños: Sí</p>
+                        <p>Convive con otros animales: Sí</p>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Cuarta fila (Gatitos) -->
+            <div class="card-container" data-tamano="pequeno" data-edad="cachorro" data-sexo="hembra" data-tipo="gato"
+                data-ninos="si" data-otros-animales="si">
+                <a href="./GatitoLuna.html" class="card">
+                    <img src="../img/gatitos/Gato1.png" alt="Gatito Luna" class="dog-img">
+                    <div class="basic-info">
+                        <h2>LUNA</h2>
+                        <p class="subtitle">ADOPTA</p>
+                    </div>
+                    <div class="detailed-info">
+                        <h2>LUNA</h2>
+                        <p>ADOPTA</p>
+                        <p>Tipo: Gato</p>
+                        <p>Sexo: Hembra</p>
+                        <p>Edad: Cachorro (6 meses)</p>
+                        <p>Tamaño: Pequeño (2.5 kilos)</p>
+                        <p>Juguetona y curiosa</p>
+                        <p>Vacunas al día</p>
+                        <p>Compatible con niños: Sí</p>
+                        <p>Convive con otros animales: Sí</p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="card-container" data-tamano="pequeno" data-edad="joven" data-sexo="macho" data-tipo="gato"
+                data-ninos="si" data-otros-animales="si">
+                <a href="./GatitoMilo.html" class="card">
+                    <img src="../img/gatitos/Gato2.png" alt="Gatito Milo" class="dog-img">
+                    <div class="basic-info">
+                        <h2>MILO</h2>
+                        <p class="subtitle">ADOPTA</p>
+                    </div>
+                    <div class="detailed-info">
+                        <h2>MILO</h2>
+                        <p>ADOPTA</p>
+                        <p>Tipo: Gato</p>
+                        <p>Sexo: Macho</p>
+                        <p>Edad: Joven (1 año)</p>
+                        <p>Tamaño: Pequeño (3 kilos)</p>
+                        <p>Energético y juguetón</p>
+                        <p>Vacunas al día</p>
+                        <p>Compatible con niños: Sí</p>
+                        <p>Convive con otros animales: Sí</p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="card-container" data-tamano="mediano" data-edad="adulto" data-sexo="macho" data-tipo="gato"
+                data-ninos="si" data-otros-animales="si">
+                <a href="./GatitoOliver.html" class="card">
+                    <img src="../img/gatitos/Gato3.png" alt="Gatito Oliver" class="dog-img">
+                    <div class="basic-info">
+                        <h2>OLIVER</h2>
+                        <p class="subtitle">ADOPTA</p>
+                    </div>
+                    <div class="detailed-info">
+                        <h2>OLIVER</h2>
+                        <p>ADOPTA</p>
+                        <p>Tipo: Gato</p>
+                        <p>Sexo: Macho</p>
+                        <p>Edad: Adulto (3 años)</p>
+                        <p>Tamaño: Mediano (5.5 kilos)</p>
+                        <p>Curioso y aventurero</p>
+                        <p>Esterilizado</p>
+                        <p>Compatible con niños: Sí</p>
+                        <p>Convive con otros animales: Sí</p>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Quinta fila (Gatitos) -->
+            <div class="card-container" data-tamano="pequeno" data-edad="joven" data-sexo="hembra" data-tipo="gato"
+                data-ninos="si" data-otros-animales="si">
+                <a href="./GatitoBella.html" class="card">
+                    <img src="../img/gatitos/Gato4.png" alt="Gatito Bella" class="dog-img">
+                    <div class="basic-info">
+                        <h2>BELLA</h2>
+                        <p class="subtitle">ADOPTA</p>
+                    </div>
+                    <div class="detailed-info">
+                        <h2>BELLA</h2>
+                        <p>ADOPTA</p>
+                        <p>Tipo: Gato</p>
+                        <p>Sexo: Hembra</p>
+                        <p>Edad: Joven (2 años)</p>
+                        <p>Tamaño: Pequeño (3.5 kilos)</p>
+                        <p>Elegante y dulce</p>
+                        <p>Vacunada</p>
+                        <p>Compatible con niños: Sí</p>
+                        <p>Convive con otros animales: Sí</p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="card-container" data-tamano="mediano" data-edad="adulto" data-sexo="macho" data-tipo="gato"
+                data-ninos="si" data-otros-animales="no">
+                <a href="./GatitoLeo.html" class="card">
+                    <img src="../img/gatitos/Gato5.png" alt="Gatito Leo" class="dog-img">
+                    <div class="basic-info">
+                        <h2>LEO</h2>
+                        <p class="subtitle">ADOPTA</p>
+                    </div>
+                    <div class="detailed-info">
+                        <h2>LEO</h2>
+                        <p>ADOPTA</p>
+                        <p>Tipo: Gato</p>
+                        <p>Sexo: Macho</p>
+                        <p>Edad: Adulto (5 años)</p>
+                        <p>Tamaño: Mediano (6 kilos)</p>
+                        <p>Protector y leal</p>
+                        <p>Esterilizado</p>
+                        <p>Compatible con niños: Sí</p>
+                        <p>Convive con otros animales: No</p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="card-container" data-tamano="pequeno" data-edad="joven" data-sexo="hembra" data-tipo="gato"
+                data-ninos="si" data-otros-animales="si">
+                <a href="./GatitoChloe.html" class="card">
+                    <img src="../img/gatitos/Gato6.png" alt="Gatito Chloe" class="dog-img">
+                    <div class="basic-info">
+                        <h2>CHLOE</h2>
+                        <p class="subtitle">ADOPTA</p>
+                    </div>
+                    <div class="detailed-info">
+                        <h2>CHLOE</h2>
+                        <p>ADOPTA</p>
+                        <p>Tipo: Gato</p>
+                        <p>Sexo: Hembra</p>
+                        <p>Edad: Joven (1.5 años)</p>
+                        <p>Tamaño: Pequeño (3 kilos)</p>
+                        <p>Juguetona y curiosa</p>
+                        <p>Vacunada</p>
+                        <p>Compatible con niños: Sí</p>
+                        <p>Convive con otros animales: Sí</p>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Sexta fila (Gatitos) -->
+            <div class="card-container" data-tamano="mediano" data-edad="adulto" data-sexo="macho" data-tipo="gato"
+                data-ninos="si" data-otros-animales="si">
+                <a href="./GatitoCharlie.html" class="card">
+                    <img src="../img/gatitos/Gato7.png" alt="Gatito Charlie" class="dog-img">
+                    <div class="basic-info">
+                        <h2>CHARLIE</h2>
+                        <p class="subtitle">ADOPTA</p>
+                    </div>
+                    <div class="detailed-info">
+                        <h2>CHARLIE</h2>
+                        <p>ADOPTA</p>
+                        <p>Tipo: Gato</p>
+                        <p>Sexo: Macho</p>
+                        <p>Edad: Adulto (4 años)</p>
+                        <p>Tamaño: Mediano (5 kilos)</p>
+                        <p>Sociable y cariñoso</p>
+                        <p>Esterilizado</p>
+                        <p>Compatible con niños: Sí</p>
+                        <p>Convive con otros animales: Sí</p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="card-container" data-tamano="pequeno" data-edad="joven" data-sexo="hembra" data-tipo="gato"
+                data-ninos="si" data-otros-animales="no">
+                <a href="./GatitoLily.html" class="card">
+                    <img src="../img/gatitos/Gato8.png" alt="Gatito Lily" class="dog-img">
+                    <div class="basic-info">
+                        <h2>LILY</h2>
+                        <p class="subtitle">ADOPTA</p>
+                    </div>
+                    <div class="detailed-info">
+                        <h2>LILY</h2>
+                        <p>ADOPTA</p>
+                        <p>Tipo: Gato</p>
+                        <p>Sexo: Hembra</p>
+                        <p>Edad: Joven (1 año)</p>
+                        <p>Tamaño: Pequeño (3.5 kilos)</p>
+                        <p>Dulce y tranquila</p>
+                        <p>Vacunas al día</p>
+                        <p>Compatible con niños: Sí</p>
+                        <p>Convive con otros animales: No</p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="card-container" data-tamano="pequeno" data-edad="adulto" data-sexo="macho" data-tipo="gato"
+                data-ninos="si" data-otros-animales="si">
+                <a href="./GatitoJack.html" class="card">
+                    <img src="../img/gatitos/Gato9.png" alt="Gatito Jack" class="dog-img">
+                    <div class="basic-info">
+                        <h2>JACK</h2>
+                        <p class="subtitle">ADOPTA</p>
+                    </div>
+                    <div class="detailed-info">
+                        <h2>JACK</h2>
+                        <p>ADOPTA</p>
+                        <p>Tipo: Gato</p>
+                        <p>Sexo: Macho</p>
+                        <p>Edad: Adulto (3 años)</p>
+                        <p>Tamaño: Pequeño (4 kilos)</p>
+                        <p>Curioso y juguetón</p>
+                        <p>Esterilizado</p>
+                        <p>Compatible con niños: Sí</p>
+                        <p>Convive con otros animales: Sí</p>
+                    </div>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-contenedor">
+            <div class="footer-logo">
+                <h2>Colitas<span>Felices</span></h2>
+            </div>
+            <div class="footer-links">
+                <a href="./contacto.html">Contacto</a>
+                <a href="./AvisoLegal.html">Aviso Legal</a>
+                <a href="./PoliticaPrivacidad.html">Política de Privacidad</a>
+                <a href="./PoliticaCookies.html">Política de Cookies</a>
+                <a href="./contacto.html">Canal de Denuncias</a>
+                <a href="./mapaSitioWeb.html">Mapa del Sitio Web</a>
+            </div>
+            <div class="footer-social">
+                <h3>Síguenos</h3>
+                <a href="https://www.instagram.com" target="_blank"><img
+                        src="https://cdn-icons-png.flaticon.com/128/1384/1384031.png" alt="Instagram"></a>
+                <a href="https://www.facebook.com" target="_blank"><img
+                        src="https://cdn-icons-png.flaticon.com/24/2111/2111392.png" alt="Facebook"></a>
+                <a href="https://www.youtube.com" target="_blank"><img
+                        src="https://cdn-icons-png.flaticon.com/128/1077/1077046.png" alt="YouTube"></a>
+                <a href="https://tiktok.com" target="_blank"><img
+                        src="https://cdn-icons-png.flaticon.com/128/3046/3046125.png" alt="TikTok"></a>
+            </div>
+            <div class="footer-contact">
+                <h3>Contacto</h3>
+                <p><strong>(044) 456-7890</strong></p>
+                <p>Calle Amor Animal #123, Ciudad Trujillo</p>
+                <p><a href="mailto:contacto@colitasFelices.org">contacto@colitasFelices.org</a></p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>Web creada por <strong>Ariana Fernandez, David García, Diego Cabanillas y Paula Rodríguez</strong></p>
+        </div>
+    </footer>
+
+    <script src="../main.js"></script>
+    <script src="../js/auth-state.js"></script>
+    <script src="../js/filtro.js"></script>
+</body>
+
+</html>
